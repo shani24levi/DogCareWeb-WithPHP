@@ -1,0 +1,475 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+  
+header,main,nav,article,aside,section,footer {
+    display: block;}
+  
+body {
+    font-family: "Lato", sans-serif;
+    font-style: normal;
+}
+
+
+
+#layout main{
+    height: 540px;
+    background: #ffffff;
+    padding: 20px;
+}
+
+
+nav a {    
+    font-size: 20px;
+    line-height: 30px;
+    margin-right: 220px;
+    color: #ffffff;
+
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+nav li{
+    float: left;
+    list-style: none; 
+}
+
+.navHeader{
+    display: block;
+    width: 100%;
+    height: 30px; 
+
+}
+
+
+
+
+footer{
+    width: 100%;
+    height: 55px;
+    background: #40bf40; 
+}
+
+
+
+header{
+    position: absolute;
+    width: 100%;
+    height: 110px;
+    background-color: #40bf40;
+}
+
+.firstHeader{
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    margin-top: 1%;
+}
+
+.humborger {
+    position: relative;
+    float: right;
+    color: #40bf40;
+    margin-right: 15px;
+}
+
+.scqar{
+    display: none;
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
+
+.line {
+    position: absolute;
+    height: 7px;
+    width: 100%;
+    border-radius: 8px;
+    transition: all cubic-bezier(0.165, 0.84, 0.44, 1) 0.95s;
+}
+
+.top{top:0%;}
+.middle{top:30%;}
+.bottom{top:60%;}
+
+.icon.close .top{
+    transform: rotate(45deg);
+    top: 48%;
+}
+
+.icon.close .middle , .icon.close .bottom{
+    transform: rotate(-45deg);
+    top: 48%;
+}
+
+
+
+
+.bell{
+    float: left;
+    color: #ffffff;
+    margin-left: 30px;
+    margin-top: 13px;
+}
+
+/*------------------------------------------*/
+
+.search{
+    float: left;
+  }
+
+
+.searchButt{
+    float: left;
+    width: 40px;
+    height: 40px;
+    background: #40bf40;
+    color: white;
+    font-size: 25px;
+    border: 3px solid #40bf40;
+    cursor: pointer;
+    margin-left: 20px;
+    margin-top: 6px;
+  }
+
+.search input {
+    float: left;
+    font-size: 30px;
+    color: #000000;
+    border: 1px solid #000000;
+    border-radius: 5%;
+    font-size: 17px;
+    width: 70%;
+    height: 40px;
+    max-width: 100%;
+    font-size: 17px;
+    margin-top: 4px;
+
+}
+ 
+
+/*------------------------------------------*/
+
+.helloUSER{
+    float: left;
+    width: 110px;
+    height: 40px;
+    margin-left: 10px;
+    margin-top: 13px;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+
+.Logo{
+    float: left;
+    width: 35%;
+    height: 55px;
+    margin-left: 140px;
+}
+
+.paw1{
+    float: left;
+    font-size: 40px;
+    color: #ffffff;
+    margin-top: 7px;  
+}
+
+.paw2{
+    float: left;
+    font-size: 40px;
+    color: #ffffff;
+    margin-left: 4px;
+    margin-top: 7px;  
+}
+
+
+.Hdog{
+    float: left;
+    margin-left: 4px;
+    font-size: 40px;
+    color: #ffffff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    margin-top: 7px;
+}
+
+.Hfetch {
+    float: left;
+    font-size: 40px; 
+    color: #ffffff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    margin-top: 7px;
+
+}
+
+#logoIMG{
+    background-image: url(../images/logo.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    position: relative;
+
+    float: left;
+    margin-left: 2px;
+    width: 60px;
+    height: 60px;
+}
+
+.secHeader{
+    float: right;
+    margin-top: 6.3%;
+    padding-right: 120px;
+}
+
+h3{
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+.marcked{
+    width: 100px;
+    height: 5px;
+    background-color: #ffffff;    
+    float: right;
+    margin-top: 2px;
+
+}
+
+.HomeScren{
+    height:266px;
+    width: 100%;
+    background-color: #d3d3d3;
+    padding-top: 23%;
+}
+
+.butMain{
+    height: 277px;
+    width: 100%;
+    background-color: #ffffff;
+}
+.butMain h3{
+    color: #050505;
+}
+
+.dot{
+    height: 15px;
+    width: 15px;
+    background-color: rgb(233, 7, 7);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.one{ 
+    float: left;
+    margin: 20%;
+}
+.two{ 
+    float: left;
+    margin: 10%;
+}
+.tree{ 
+    float: right;
+    margin: 5%;
+}
+
+button{
+    display: inline-block;
+    width: 86px;
+    height: 86px;
+    border-radius: 50%;
+    border: 3px solid #050505;
+    color: #050505;
+    background-color: #ffffff;
+}
+
+
+.Allicons{ 
+    font-size: 50px;
+    margin: 20%;
+}
+
+.fille{
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.control{
+    position: absolute;
+    float: left;
+    margin-left: 20px;
+    margin-top: 150px;
+}
+
+.sound{
+    float: right;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.hart{    
+    position: absolute;
+    float: left;
+    margin-left: 375px;
+    margin-top: 150px;
+}
+
+.camara{
+    position: absolute;
+    float: left;
+    margin-left: 155px;
+    margin-top: 35px;
+}
+
+.BigButt{
+    display: inline-block;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    border: 3px solid #050505;
+    color: #050505;
+
+}
+
+.BigIcon{
+    font-size: 80px;
+    margin: 20%;
+}
+
+.ImgIcon{
+    width: 55px;
+    height: 55px;
+}
+
+.hart .ImgIcon{ margin-top: 9px;}
+
+
+
+.navIcon{
+    font-size: 30px;
+    margin: 20%;
+
+}
+
+.dog1{    
+    float: left;
+    margin: 11%;
+    font-size: 180%;
+}
+
+.poto{
+    width: 20px;
+    height: 20px;
+    display: block;
+    float: right;
+    background-image: url('/images/dog1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+}
+
+
+/*<----layout2----->*/
+
+.myDods{
+    float: right;
+    margin-top: 5px;
+    padding-right: 40%;
+}
+
+.listOFdogs{
+    display: block;
+    height: 150px;
+    padding-top: 110px;
+    background-color: #a51313;
+}
+
+.dogPectuer1{
+    float: right;
+    display: block;
+    margin: 15px;
+    width: 86px;
+    height: 86px;
+    border-radius: 50%;
+    border: 3px solid #050505;
+    color: #050505;
+    background-image: url('/images/dog1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.info{
+    float: right;
+    width: 20%;
+    margin: 15px;
+    background-color: aqua;
+}
+
+.MoreInfo{
+    float: left;
+    width: 20%;
+    margin: 15px;
+    background-color: rgb(173, 189, 32);
+    border: 3px solid;
+    color: #000000;
+
+}
+
+.goleft{
+    font-size: 30px;
+    text-align: center;
+}
+
+.line{
+    width: 80%;
+    height: 5px;
+    background-color: #a6a6a6;
+}
+
+
+/*-------------------------------------*/
+
+    
+
+
+@media screen and (max-width: 700px) {
+    .firstHeader, .secHeader {   
+      flex-direction: column;
+    }
+}
+
+
+@media (max-width: 1010px) {
+
+    .helloUSER{display: none;}
+
+}
+
+@media (max-width: 885px) {
+
+    .search input{display: none;}
+    .Logo {width: 60%;} 
+
+
+}
+
+@media (max-width: 736px) {
+
+    .scqar{display: block;}
+    .bell{display: block;}
+    .Logo {width: 49%;} 
+
+
+}
+
+
+
+
+
+
