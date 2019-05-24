@@ -12,11 +12,9 @@ body {
 }
 
 
-
 #layout main{
-    height: 540px;
     background: #ffffff;
-    padding: 20px;
+    padding-top: 110px;
 }
 
 
@@ -48,7 +46,7 @@ nav li{
 
 footer{
     width: 100%;
-    height: 55px;
+    height: 65px;
     background: #40bf40; 
 }
 
@@ -108,11 +106,27 @@ header{
 
 
 .bell{
+    display: none;
     float: left;
     color: #ffffff;
     margin-left: 30px;
     margin-top: 13px;
 }
+
+.bellFORwb{
+    float: right;
+    display: block;
+    width: 130px;
+    height: 80px;
+    color: #000000;
+    border: 3px solid #000000;
+    border-radius: 5%;
+
+}
+
+
+
+
 
 /*------------------------------------------*/
 
@@ -240,15 +254,60 @@ h3{
     margin-top: 2px;
 
 }
-
-.HomeScren{
-    height:266px;
-    width: 100%;
-    background-color: #d3d3d3;
-    padding-top: 23%;
+/*--------main----------*/
+.btn-group .button {
+    background-color: #ffffff;
+    border: 3px solid green;
+    text-align: center;
+    padding: 15px 32px;
+  
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    width: 150px;
+    display: block;
+}
+  
+.btn-group .button:not(:last-child) {
+    border-bottom: none; 
+}
+  
+.btn-group .button:hover {
+    background-color: #3e8e41;
+}
+.asid1{
+    float: left;
+    width: 150px;
+    height: 80%;
+}
+.asid2{
+    float: left;
+    width: 150px;
+    height: 80%;
 }
 
+
+
+
+
+.HomeScren{
+    display: none;
+    background-color: #d3d3d3;
+    padding: 110px;
+}
+.HomeScrenWEB{
+    display: block;
+    background-color: #d3d3d3;
+    margin-top: 7%;
+    margin-right: 2%;
+    height: 400px;
+    margin-left: 300px;
+
+}
+
+
 .butMain{
+    display: none;
     height: 277px;
     width: 100%;
     background-color: #ffffff;
@@ -267,18 +326,18 @@ h3{
 
 .one{ 
     float: left;
-    margin: 20%;
+    margin: 2%;
 }
 .two{ 
     float: left;
     margin: 10%;
 }
 .tree{ 
-    float: right;
+    float: left;
     margin: 5%;
 }
 
-button{
+.Mq{
     display: inline-block;
     width: 86px;
     height: 86px;
@@ -298,6 +357,7 @@ button{
     float: left;
     margin-left: 20px;
     margin-top: 20px;
+
 }
 
 .control{
@@ -311,6 +371,7 @@ button{
     float: right;
     margin-right: 20px;
     margin-top: 20px;
+
 }
 
 .hart{    
@@ -334,6 +395,7 @@ button{
     border-radius: 50%;
     border: 3px solid #050505;
     color: #050505;
+    background-color: #ffffff;
 
 }
 
@@ -438,10 +500,23 @@ button{
     
 
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 500px){
     .firstHeader, .secHeader {   
       flex-direction: column;
     }
+
+    .asid1, .asid2{display: none;}
+    .butMain{display: block;}
+
+    .bellFORwb{display: none;}
+    .bull{display: block;}
+
+    .HomeScrenWEB{display: none;}
+    .HomeScren{display: block;}
+
+    .Logo h1{font-size: 30px;}
+    
+
 }
 
 
