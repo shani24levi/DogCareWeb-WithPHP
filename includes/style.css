@@ -18,36 +18,39 @@ body {
 }
 
 
-nav a {    
-    font-size: 20px;
-    line-height: 30px;
-    margin-right: 220px;
-    color: #ffffff;
-
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    text-align: center;
-}
-
-nav li{
-    float: left;
-    list-style: none; 
-}
-
 .navHeader{
-    display: block;
+    display: flex;
     width: 100%;
     height: 30px; 
 
+}
+ul {
+    list-style-type: none;
+    margin-top: 5px;
+}
+  
+li {
+    float: left;
+}
+  
+li a {
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+li a:hover {
+    background-color: #3e8e41;
 }
 
 
 
 
 footer{
+    display: none;
     width: 100%;
     height: 65px;
-    background: #40bf40; 
 }
 
 
@@ -71,6 +74,7 @@ header{
     float: right;
     color: #40bf40;
     margin-right: 15px;
+    margin-top: 6px;
 }
 
 .scqar{
@@ -108,9 +112,9 @@ header{
 .bell{
     display: none;
     float: left;
-    color: #ffffff;
     margin-left: 30px;
     margin-top: 13px;
+    color: #ffffff;
 }
 
 .bellFORwb{
@@ -178,10 +182,9 @@ header{
 
 
 .Logo{
-    float: left;
-    width: 35%;
+    float: right;
     height: 55px;
-    margin-left: 140px;
+    margin-right: 7%;
 }
 
 .paw1{
@@ -231,12 +234,13 @@ header{
     margin-left: 2px;
     width: 60px;
     height: 60px;
+    border-radius: 50%;
 }
 
 .secHeader{
     float: right;
     margin-top: 6.3%;
-    padding-right: 120px;
+    padding-right: 30px;
 }
 
 h3{
@@ -246,14 +250,6 @@ h3{
     text-align: center;
 }
 
-.marcked{
-    width: 100px;
-    height: 5px;
-    background-color: #ffffff;    
-    float: right;
-    margin-top: 2px;
-
-}
 /*--------main----------*/
 .btn-group .button {
     background-color: #ffffff;
@@ -266,6 +262,7 @@ h3{
     cursor: pointer;
     width: 150px;
     display: block;
+    font-weight: bold;
 }
   
 .btn-group .button:not(:last-child) {
@@ -286,6 +283,26 @@ h3{
     height: 80%;
 }
 
+.shimi{
+    float: right;
+    margin: 25px;
+    margin-top: 11%;
+    width: 200px;
+    height: 200px;
+    background-image: url('/images/dog1.jpg');
+    background-size: cover;
+    border-radius: 10%;
+}
+
+.infoWEB{
+    width: 550px;
+    height: 350px;
+    margin: 25px;
+    margin-top: 140px;
+    text-align: center;
+    
+}
+
 
 
 
@@ -293,15 +310,15 @@ h3{
 .HomeScren{
     display: none;
     background-color: #d3d3d3;
-    padding: 110px;
-}
+    height: 260px;}
+
 .HomeScrenWEB{
     display: block;
     background-color: #d3d3d3;
     margin-top: 7%;
     margin-right: 2%;
-    height: 400px;
-    margin-left: 300px;
+    height: 410px;
+    margin-left: 325px;
 
 }
 
@@ -425,15 +442,64 @@ h3{
     font-size: 180%;
 }
 
+.dog2{
+    float: left;
+    font-size: 180%
+}
+
 .poto{
     width: 20px;
     height: 20px;
     display: block;
-    float: right;
-    background-image: url('/images/dog1.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 50%;
+}
+.Pone{
+    background-image: url('/images/dog1.jpg'); 
+}
+.Ptwo{
+    background-image: url('/images/dog2.jpg');
+}
+
+.smallCamara{
+    font-size: 20px;
+    margin: 15%;
+    color: #ffffff;
+
+}
+
+
+.btn-group-footer {
+    display: none;}
+
+.btn-group-footer .button {
+    background-color: #ffffff;
+    border: 3px solid green;
+    text-align: center;
+    padding: 15px 32px;
+  
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    width: 120.8px;
+    height: 65px;
+    display: block;
+    float: left;
+    font-weight: bold;
+
+}
+  
+.btn-group-footer .button:not(:last-child) {
+    border-bottom: none; 
+}
+  
+.btn-group-footer .button:hover {
+    background-color: #3e8e41;
+}
+
+.footericons{
+    font-size: 25px;
 }
 
 
@@ -491,8 +557,12 @@ h3{
 .line{
     width: 80%;
     height: 5px;
-    background-color: #a6a6a6;
+    background-color: #ffffff;
 }
+
+
+
+
 
 
 /*-------------------------------------*/
@@ -501,24 +571,31 @@ h3{
 
 
 @media screen and (max-width: 500px){
-    .firstHeader, .secHeader {   
-      flex-direction: column;
-    }
 
     .asid1, .asid2{display: none;}
     .butMain{display: block;}
 
     .bellFORwb{display: none;}
-    .bull{display: block;}
+    .bell{display: block;}
 
     .HomeScrenWEB{display: none;}
     .HomeScren{display: block;}
 
-    .Logo h1{font-size: 30px;}
+    .navHeader{
+        display: block;
+        text-align: center;
+    }
+    .btn-group-footer {display: block;}
+    footer{display: block}
     
 
 }
 
+@media (max-width: 580px) {
+    .Hdog, .Hfetch{font-size: 25px;}
+    #logoIMG{width: 40px; height: 40px;}
+    .paw1,.paw2{font-size: 30px;}
+}
 
 @media (max-width: 1010px) {
 
@@ -526,22 +603,15 @@ h3{
 
 }
 
-@media (max-width: 885px) {
-
-    .search input{display: none;}
-    .Logo {width: 60%;} 
-
-
-}
 
 @media (max-width: 736px) {
-
+    .search input{display: none;}
     .scqar{display: block;}
-    .bell{display: block;}
-    .Logo {width: 49%;} 
 
 
 }
+
+
 
 
 

@@ -12,10 +12,12 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
 
     <body id="layout">
         <header>
+
             <section class="firstHeader">
                 <div class="humborger" onclick="changHumborger()">
                     <div class="scqar icon">
@@ -24,37 +26,39 @@
                         <span class="line bottom"></span>
                     </div>
                 </div>   
-
-
+        
+        
                 <div  class="bell"> <i class="fa fa-bell"   style="font-size:25px; display: block;"></i></div>                               
-
+        
                 <form class="search" action="/action_page.php">
                     <button class="searchButt" type="submit"><i class="fa fa-search"></i></button>
                     <input type="text" placeholder="Search.." name="search">
                 </form>
-                
+                        
                 <div class="helloUSER">
                     <h4>ערב טוב שרון</h4>
                 </div>
-
+        
                 <div class="Logo">
-                        <span class='fas fa-paw paw1'></span>
-                        <h1 class="Hdog">Dog </h1>
-                        <span id="logoIMG"></span> 
-                        <h1 class="Hfetch"> Fetch</h1> 
-                        <span class='fas fa-paw paw2'></span>    
+                    <span class='fas fa-paw paw1'></span>
+                    <h1 class="Hdog">Dog </h1>
+                    <span id="logoIMG"></span> 
+                    <h1 class="Hfetch"> Fetch</h1> 
+                    <span class='fas fa-paw paw2'></span>    
                 </div>
             </section>
-
+        
+  
             <section class="secHeader"> 
                 <div class="navHeader">
                     <nav>
                         <ul>
-                            <li><a href="#"></a> Wifi מעקב</li>
-                            <li><a href="#"></a> GPS מעקב</li>
-                            <li><a href="#"></a>דוח מעקבים</li>
-                            <li><a href="#"></a> נתונים</li>
+                            <li><a href="#">נתונים</a></li>
+                            <li><a href="#">דוח מעקבים</a></li>
+                            <li><a href="#">GPS מעקב </a></li>
+                            <li><a  href="#">Wifi מעקב</a></li>
                         </ul>
+
                     </nav>
                 </div>
             </section>
@@ -65,16 +69,18 @@
         <main>
             <div class="asid1">
                 <div class="btn-group">
-                    <button class="button"><i class='far fa-folder Allicons'></i>פידבקים</button>
+                    <button class="button"><img src="images/food.svg" class="ImgIcon"></i>תזונה</button>
                     <button class="button"><img src="images/control.png" class="ImgIcon">בקרה</button>                            
                     <button class="button"><i class='fas fa-volume-up Allicons'></i>חיבור לשמע</button>
+                    <button class="button"><i class='far fa-play-circle Allicons'></i>הקלטות</button>                            
                 </div>
             </div>
             <div class="asid2">
                 <div class="btn-group">
-                    <button class="button"><i class='far fa-folder Allicons'></i>פידבקים</button>
-                    <button class="button"><img src="images/control.png" class="ImgIcon">בקרה</button>                            
+                    <button class="button"><i class='far fa-folder Allicons'></i>פידבקים </button>
+                    <button class="button"><img src="images/dog.svg" class="ImgIcon">נתונים</button>                            
                     <button class="button"><img src="images/hart.png" style="width:71px; height:78px; " >מדדי לב</button>
+                    <button class="button"><img src="images/pawprint.svg" class="ImgIcon">בריאות</button>                            
                 </div>
             </div>
 
@@ -83,8 +89,11 @@
                 <a class="dot one"></a>
                 <a class="dot two"></a>
                 <a class="dot tree"></a> 
-                <div class="fas fa-map-marker-alt dog1"></div>   
-                <div class="poto"></div> 
+                <div class="fas fa-map-marker-alt dog1"><span class="poto Pone"></span></div>  
+                <div class="fas fa-map-marker-alt dog2"><span class="poto Ptwo"></span></div> 
+                <div class='fas fa-camera smallCamara'></div>   
+  
+ 
             </section>      
 
 
@@ -110,7 +119,7 @@
                 </div>
     
                 <div class= "camara">
-                    <button class="BigButt"><i i class='fas fa-camera BigIcon'></i></button>
+                    <button class="BigButt"><i class='fas fa-camera BigIcon'></i></button>
                     <h3>צפיה בזמן אמת</h3>
                 </div>
             </section>
@@ -120,14 +129,18 @@
             </div>
 
             <section class="HomeScrenWEB">
+                <div class="shimi"></div>
+                <div class="infoWEB"><h1>שימי</h1> <p>כניסה אחרונה ב14 למאי 2019 <br> אזור אסור מוגדר: ספה,מיטה זוגית <br> מדד קול מעל 4 דציבל כ3 דק ב14 למאי שעה 13:45</p></div>
             </section>     
-    
-
-
         </main>
 
         <footer>
-
+            <div class="btn-group-footer">
+                <button class="button"><i class="fa fa-home" style="font-size: 25px;"></i>בית</button>
+                <button class="button"><i class='fas fa-dog' style="font-size: 30px;"></i>הכלב-שלי</button>                            
+                <button class="button"><i  class="fa fa-map" style="font-size: 25px;"></i> Map</button>
+                <button class="button"><i class="fa fa-battery-full" style="font-size: 25px;"></i> סוללה</button>
+            </div>
         </footer>
 
         <script src="./includes/script.js"></script>

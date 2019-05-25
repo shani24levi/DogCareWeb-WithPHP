@@ -6,17 +6,18 @@
         <link rel="stylesheet" href="includes/style.css">
         <mata charset= "UTF-8"></mata>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-        <meta name="viewport" content="width=device-width, initial-scale=1">  
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
 
     <body id="layout">
         <header>
+
             <section class="firstHeader">
                 <div class="humborger" onclick="changHumborger()">
                     <div class="scqar icon">
@@ -24,52 +25,75 @@
                         <span class="line middle"></span>
                         <span class="line bottom"></span>
                     </div>
-                </div>                                       <span class="fa fa-bell bell"></span>
-                <span class="fa fa-search search"></span>
+                </div>   
+        
+        
+                <div  class="bell"> <i class="fa fa-bell"   style="font-size:25px; display: block;"></i></div>                               
+        
+                <form class="search" action="/action_page.php">
+                    <button class="searchButt" type="submit"><i class="fa fa-search"></i></button>
+                    <input type="text" placeholder="Search.." name="search">
+                </form>
+                        
+                <div class="helloUSER">
+                    <h4>ערב טוב שרון</h4>
+                </div>
+        
                 <div class="Logo">
-                        <span class='fas fa-paw paw'></span>
-                        <h1 class="Hdog">Dog </h1>
-                        <span id="logoIMG"></span>                            <h1 class="Hfetch"> Fetch</h1>     
+                    <span class='fas fa-paw paw1'></span>
+                    <h1 class="Hdog">Dog </h1>
+                    <span id="logoIMG"></span> 
+                    <h1 class="Hfetch"> Fetch</h1> 
+                    <span class='fas fa-paw paw2'></span>    
+                </div>
+            </section>
+        
+  
+            <section class="secHeader"> 
+                <div class="navHeader">
+                    <nav>
+                        <ul>
+                            <li><a href="#">נתונים</a></li>
+                            <li><a href="#">דוח מעקבים</a></li>
+                            <li><a href="#">GPS מעקב </a></li>
+                            <li><a  href="#">Wifi מעקב</a></li>
+                        </ul>
+
+                    </nav>
                 </div>
             </section>
 
-            <section class="myDods">  
-                <h3>הכלבים שלי</h3>
-                <span class="marcked"></span>
-            </section>
+
         </header>
 
         <main>
             <section class="listOFdogs">
-                <section class="dogPectuer1"></section>
-                <section class="info">
+                <div class="dogPectuer1"></div>
+                <siv class="info">
                     <h3>שימי</h3>
                     <p>בן 4 שנים<br> גזע מעורב <br> בעיות משמעת בקירבה לנקודה חמה "ספה ימין"</p>
-                </section>
-
+                </div>
+                
                 <section class="MoreInfo"><a href="#"><i class="fa fa-chevron-left goleft"></i></a></section>
                 <section class="line"></section>
             </section>
-
+                
             <section></section>
-            <section class="line"></section>
-            <section></section>
-            
-
+            <section class="line"></section>                <section></section>
+                 
         </main>
 
-        <footer class="navFoter">
-            <nav>
-                <ul>
-                    <li><a href="#"><i class='fas fa-home navIcon'></i></a></li>
-                    <li><a href="#"><i class='fas fa-map navIcon'></i></a></li>
-                    <li><a href="#"><i class="fa fa-battery-4 navIcon"></i></a></li>
-                    <li><a href="#"><i class="fa fa-battery-4 navIcon"></i></a></li>
-                </ul>
-            </nav>
-
+        <footer>
+            <div class="btn-group-footer">
+                <button class="button"><i class="fa fa-home" style="font-size: 25px;"></i>בית</button>
+                <button class="button"><i class='fas fa-dog' style="font-size: 30px;"></i>הכלב-שלי</button>                            
+                <button class="button"><i  class="fa fa-map" style="font-size: 25px;"></i> Map</button>
+                <button class="button"><i class="fa fa-battery-full" style="font-size: 25px;"></i> סוללה</button>
+            </div>
         </footer>
 
         <script src="./includes/script.js"></script>
     </body>
 </html>
+
+
