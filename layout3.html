@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>DogFetch</title>
+        <link rel="stylesheet" href="includes/style.css">
+        <mata charset= "UTF-8"></mata>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <body id="layout">
+        <header>
+
+            <section class="firstHeader">
+                <div class="humborger" onclick="changHumborger()">
+                    <div class="scqar icon">
+                        <span class="line top"></span>
+                        <span class="line middle"></span>
+                        <span class="line bottom"></span>
+                    </div>
+                </div>   
+        
+        
+                <div  class="bell"> <i class="fa fa-bell"   style="font-size:25px; display: block;"></i></div>                               
+        
+                <form class="search" action="/action_page.php">
+                    <button class="searchButt" type="submit"><i class="fa fa-search"></i></button>
+                    <input type="text" placeholder="Search.." name="search">
+                </form>
+                        
+                <div class="helloUSER">
+                    <h4>ערב טוב שרון</h4>
+                </div>
+        
+                <div class="Logo">
+                    <span class='fas fa-paw paw1'></span>
+                    <h1 class="Hdog">Dog </h1>
+                    <span id="logoIMG"></span> 
+                    <h1 class="Hfetch"> Fetch</h1> 
+                    <span class='fas fa-paw paw2'></span>    
+                </div>
+            </section>
+        
+  
+            <section class="secHeader"> 
+                <div class="navHeader">
+                    <nav>
+                        <ul>
+                            <li><a href="#">נתונים</a></li>
+                            <li><a href="#">דוח מעקבים</a></li>
+                            <li><a href="#">GPS מעקב </a></li>
+                            <li><a  href="#">Wifi מעקב</a></li>
+                        </ul>
+
+                    </nav>
+                </div>
+            </section>
+
+
+        </header>
+
+        <main>
+            <div class="container">
+                        <div id="main_area">
+                                <!-- Slider -->
+                                <div class="row">
+                                    <div class="col-xs-12" id="slider">
+                                        <!-- Top part of the slider -->
+                                        <div class="row">
+                                            <div class="col-sm-8" id="carousel-bounding-box">
+                                                <div class="carousel slide" id="myCarousel">
+                                                    <!-- Carousel items -->
+                                                    <div class="carousel-inner">
+                                                        <div class="active item" data-slide-number="0">
+                                                        <img src="http://placehold.it/770x300&text=one"></div>
+                
+                                                        <div class="item" data-slide-number="1">
+                                                        <img src="http://placehold.it/770x300&text=two"></div>
+                
+                                                        <div class="item" data-slide-number="2">
+                                                        <img src="http://placehold.it/770x300&text=three"></div>
+                
+                                                        <div class="item" data-slide-number="3">
+                                                        <img src="http://placehold.it/770x300&text=four"></div>
+                
+                                                        <div class="item" data-slide-number="4">
+                                                        <img src="http://placehold.it/770x300&text=five"></div>
+                
+                                                        <div class="item" data-slide-number="5">
+                                                        <img src="http://placehold.it/770x300&text=six"></div>
+                                                    </div><!-- Carousel nav -->
+                                                    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                                                        <span class="glyphicon glyphicon-chevron-left"></span>                                       
+                                                    </a>
+                                                    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                                                        <span class="glyphicon glyphicon-chevron-right"></span>                                       
+                                                    </a>                                
+                                                    </div>
+                                            </div>
+                
+                                            <div class="col-sm-4" id="carousel-text"></div>
+                
+                                            <div id="slide-content" style="display: none;">
+                                                <div id="slide-content-0">
+                                                    <h2>Slider One</h2>
+                                                    <p>Lorem Ipsum Dolor</p>
+                                                    <p class="sub-text">October 24 2014 - <a href="#">Read more</a></p>
+                                                </div>
+                
+                                                <div id="slide-content-1">
+                                                    <h2>Slider Two</h2>
+                                                    <p>Lorem Ipsum Dolor</p>
+                                                    <p class="sub-text">October 24 2014 - <a href="#">Read more</a></p>
+                                                </div>
+                
+                                                <div id="slide-content-2">
+                                                    <h2>Slider Three</h2>
+                                                    <p>Lorem Ipsum Dolor</p>
+                                                    <p class="sub-text">October 24 2014 - <a href="#">Read more</a></p>
+                                                </div>
+                
+                                                <div id="slide-content-3">
+                                                    <h2>Slider Four</h2>
+                                                    <p>Lorem Ipsum Dolor</p>
+                                                    <p class="sub-text">October 24 2014 - <a href="#">Read more</a></p>
+                                                </div>
+                
+                                                <div id="slide-content-4">
+                                                    <h2>Slider Five</h2>
+                                                    <p>Lorem Ipsum Dolor</p>
+                                                    <p class="sub-text">October 24 2014 - <a href="#">Read more</a></p>
+                                                </div>
+                
+                                                <div id="slide-content-5">
+                                                    <h2>Slider Six</h2>
+                                                    <p>Lorem Ipsum Dolor</p>
+                                                    <p class="sub-text">October 24 2014 - <a href="#">Read more</a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!--/Slider-->
+                
+                                <div class="row hidden-xs" id="slider-thumbs">
+                                        <!-- Bottom switcher of slider -->
+                                        <ul class="hide-bullets">
+                                            <li class="col-sm-2">
+                                                <a class="thumbnail" id="carousel-selector-0"><img src="http://placehold.it/170x100&text=one"></a>
+                                            </li>
+                
+                                            <li class="col-sm-2">
+                                                <a class="thumbnail" id="carousel-selector-1"><img src="http://placehold.it/170x100&text=two"></a>
+                                            </li>
+                
+                                            <li class="col-sm-2">
+                                                <a class="thumbnail" id="carousel-selector-2"><img src="http://placehold.it/170x100&text=three"></a>
+                                            </li>
+                
+                                            <li class="col-sm-2">
+                                                <a class="thumbnail" id="carousel-selector-3"><img src="http://placehold.it/170x100&text=four"></a>
+                                            </li>
+                
+                                            <li class="col-sm-2">
+                                                <a class="thumbnail" id="carousel-selector-4"><img src="http://placehold.it/170x100&text=five"></a>
+                                            </li>
+                
+                                            <li class="col-sm-2">
+                                                <a class="thumbnail" id="carousel-selector-5"><img src="http://placehold.it/170x100&text=six"></a>
+                                            </li>
+                                        </ul>                 
+                                </div>
+                        </div>
+            </div>
+
+                   
+                 
+        </main>
+
+        <footer>
+            <div class="btn-group-footer">
+                <button class="button"><i class="fa fa-home" style="font-size: 25px;"></i>בית</button>
+                <button class="button"><i class='fas fa-dog' style="font-size: 30px;"></i>הכלב-שלי</button>                            
+                <button class="button"><i  class="fa fa-map" style="font-size: 25px;"></i> Map</button>
+                <button class="button"><i class="fa fa-battery-full" style="font-size: 25px;"></i> סוללה</button>
+            </div>
+        </footer>
+
+        <script src="./includes/script.js"></script>
+    </body>
+</html>
+
+

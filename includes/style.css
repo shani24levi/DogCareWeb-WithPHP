@@ -69,42 +69,35 @@ header{
     margin-top: 1%;
 }
 
-.humborger {
+
+.humborger{
+    display: none;
     position: relative;
     float: right;
-    color: #40bf40;
     margin-right: 15px;
     margin-top: 6px;
-}
-
-.scqar{
-    display: none;
     width: 50px;
     height: 50px;
-    position: relative;
 }
 
-.line {
+
+.humborger span{
     position: absolute;
-    height: 7px;
+    display: block;
     width: 100%;
-    border-radius: 8px;
-    transition: all cubic-bezier(0.165, 0.84, 0.44, 1) 0.95s;
+    height: 10%;
+    border-radius: 10px;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #ffffff;
+    transition: .5s;
 }
+.humborger span:nth-child(1){ transform: translate(-50%,-50%) translateY(-15px);}
+.humborger span:nth-child(3){ transform: translate(-50%,-50%) translateY(15px);}
 
-.top{top:0%;}
-.middle{top:30%;}
-.bottom{top:60%;}
-
-.icon.close .top{
-    transform: rotate(45deg);
-    top: 48%;
-}
-
-.icon.close .middle , .icon.close .bottom{
-    transform: rotate(-45deg);
-    top: 48%;
-}
+.humborger:hover span:nth-child(1){ transform: translate(-50%,-50%) translateY(-20px);}
+.humborger:hover span:nth-child(3){ transform: translate(-50%,-50%) translateY(20px);}
 
 
 
@@ -505,62 +498,134 @@ h3{
 
 /*<----layout2----->*/
 
-.myDods{
-    float: right;
-    margin-top: 5px;
-    padding-right: 40%;
+.mainlayout2{
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.dogData{
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px
 }
 
-.listOFdogs{
+.infoDOG{
+    overflow: hidden;
+    margin-top: 15px;
+}
+
+.infoDOG a{
+    float: right;
+    margin-left: 10px;
+}
+.infoDOG img{
     display: block;
-    height: 150px;
-    padding-top: 110px;
-    background-color: #a51313;
+    width: 150px;
+    height: 150pxl;
 }
-
-.dogPectuer1{
-    float: right;
-    display: block;
-    margin: 15px;
-    width: 86px;
-    height: 86px;
-    border-radius: 50%;
-    border: 3px solid #050505;
-    color: #050505;
-    background-image: url('/images/dog1.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
+.infoDOGbody{
+    overflow: hidden;
 }
-
-.info{
-    float: right;
-    width: 20%;
-    margin: 15px;
-    background-color: aqua;
+.infoDOGbody h4{
+    text-align: right;
+    margin: 0 0 5px;
+    font-size:18px;
 }
-
-.MoreInfo{
+.infoDOGbody a{
     float: left;
-    width: 20%;
-    margin: 15px;
-    background-color: rgb(173, 189, 32);
-    border: 3px solid;
-    color: #000000;
+    margin: 0 0 5px;
+    font-size:18px;
+}
+
+.infoDOGbody p{
+    text-align: right;
+    margin: 0 0 10px;
 
 }
 
-.goleft{
-    font-size: 30px;
+.infoDOGbody ul{
+    float: right;
+    margin-left: -5px;
+    margin-top: 5px;
+
+}
+
+.infoDOGbody li{
+
+    float: left;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.but-add-dog{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+    border: 1px solid #e3e3e3;
+    margin-right: 90%;
     text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    color: #e3e3e3;
+}
+.but-add-dog:hover{
+    background-color: #3e8e41;
 }
 
-.line{
-    width: 80%;
-    height: 5px;
-    background-color: #ffffff;
+
+.dogDataAdd{
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    width: 96%;
+}
+
+.infoDOGadd{
+    overflow: hidden;
+    margin-top: 15px;
+
+}
+
+.infoDOGadd a{
+    float: right;
+    margin-left: 10px;
+}
+.infoDOGadd img{
+    display: block;
+    width: 150px;
+    height: 150pxl;
+}
+.DOGbodyADD{
+    overflow: hidden;
+}
+.DOGbodyADD h4{
+    text-align: right;
+    margin: 0 0 5px;
+    font-size:18px;
 }
 
 
+
+
+
+/*-------------layout3----------------*/
+
+
+.hide-bullets {
+    list-style:none;
+    margin-left: -40px;
+    margin-top:20px;
+
+}
 
 
 
@@ -585,10 +650,18 @@ h3{
         display: block;
         text-align: center;
     }
+    .humborger{display: block;}
     .btn-group-footer {display: block;}
     footer{display: block}
-    
 
+    .infoDOGbody ul{display: none;}
+    .infoDOGbody a{display: none;}
+    .dogData{padding: 0px; margin-bottom: 0px;}
+    
+    .but-add-dog{color: #000000; border: 3px solid #000000; background-color: #ffffff;}
+    .dogDataAdd{border: 0px; background: #ffffff;}
+    .DOGbodyADD h4{display: none;}
+    .infoDOGadd img{display: none;}
 }
 
 @media (max-width: 580px) {
