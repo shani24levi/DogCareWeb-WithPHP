@@ -33,7 +33,7 @@ body {
 
 .navHeader{
     float: right;
-    height: 30px; 
+    margin-top: 9px;
 }
 
 ul {
@@ -249,9 +249,10 @@ header{
 }
 
 .secHeader{
-    margin-top: 80px;
+    margin-top: 12vh;
     width: 100%;
     float: right;
+    height: 47px;
     padding-right: 30px;
     background-color: #ffffff;
 }
@@ -262,11 +263,10 @@ header{
     font-weight: bold;
     font-size: 20px;
     text-align: center;
+    margin-top: 10px;
 }
-#myDoginfoPage .Hh3{
-    margin-top: 1px;
 
-}
+
 
 /*--------main----------*/
 .btn-group .button {
@@ -648,7 +648,7 @@ header{
     font-size: 30px;
     border: none;
     background-color: #ffffff;
-    margin-top: 2px;
+    margin-top: 10px;
 }
 .h3ONmq{display: none;}
 
@@ -707,6 +707,33 @@ header{
     width: 100%;
     padding: 20px;
     border:2px solid #d3d3d3;
+}
+
+
+.copy{
+    margin:20px;
+    padding:20px;
+    border-style:solid;
+    border-width:1px;
+    border-color: #ddd;
+    -webkit-border-radius:3px;
+    border-radius:3px;
+    font-size:18px;
+}
+.panel{ margin: 20px; padding:0px; height:34px;}
+.audio-panel{border:none !important;}
+#playlist,audio{width:100%;}
+.active a{color:#fff;}
+.playLIST1 ul{list-style:none; margin:0px; padding:20px;}
+.playLIST1 li{margin:0px; padding:0px;}
+.playLIST1 li, a{transition:all 0.5s;}
+.list-group-item.active a{ color:#fff;}
+.playLIST1 a{display:block; position:relative; width:100%;}
+.payLIST1 li a{display:block;}
+.playLIST1 a{ color:#fff;}
+.last{display:none;}
+a:hover{
+    text-decoration: none;
 }
 
 
