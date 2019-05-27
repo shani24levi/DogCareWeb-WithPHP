@@ -15,11 +15,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
 
-    <body id="layout">
+    <body id="listDogsPage">
         <header>
 
             <section class="firstHeader">
-                <div class="humborger" onclick="changHumborger()">                        
+                <div class="humborger">                        
                     <span></span> 
                     <span></span> 
                     <span></span> 
@@ -28,7 +28,7 @@
         
                 <div  class="bell"> <i class="fa fa-bell"   style="font-size:25px; display: block;"></i></div>                               
         
-                <form class="search" action="/action_page.php">
+                <form class="search" action="#.php">
                     <button class="searchButt" type="submit"><i class="fa fa-search"></i></button>
                     <input type="text" placeholder="Search.." name="search">
                 </form>
@@ -48,8 +48,10 @@
         
   
             <section class="secHeader"> 
-                <div class="navHeader">
-                    <i class="fa fa-arrow-right" style="float: right;"></i>
+                <button class="goBack" onclick="goBackTOindex()"><i class="fa fa-arrow-right"></i></button>
+                <h3 class="Hh3 h3ONmq">הכלבים שלי</h3>
+
+                <div class="navHeader"> 
                     <nav>
                         <ul>
                             <li><a href="#">נתונים</a></li>
@@ -57,7 +59,6 @@
                             <li><a href="#">GPS מעקב </a></li>
                             <li><a  href="#">Wifi מעקב</a></li>
                         </ul>
-
                     </nav>
                 </div>
             </section>
@@ -69,7 +70,7 @@
             <div class="mainlayou2">
                 <div class="dogData">
                     <div class="infoDOG">
-                        <a  href="#"><img src="images/dog1.jpg"></a>
+                        <button  style="float: right; margin-left:20px;"><img src="images/dog1.jpg"></button>
                         <div class="infoDOGbody">
 
                             <a href="#">עדכון פרופיל</a>
@@ -101,7 +102,7 @@
 
                 <div class="dogData">
                     <div class="infoDOG">
-                        <a  href="#"><img src="images/dog2.jpg"></a>
+                        <button  style="float: right; margin-left:20px;" onclick="myDogINFO()"><img src="images/dog2.jpg"></button>
                         <div class="infoDOGbody">
                             <a href="#">עדכון פרופיל</a>
                             <h4>גולי כדור פרווה</h4>
@@ -144,7 +145,7 @@
 
         <footer>
             <div class="btn-group-footer">
-                <button class="button"><i class="fa fa-home" style="font-size: 25px;"></i>בית</button>
+                <button class="button" onclick="pageIndex()"><i class="fa fa-home" style="font-size: 25px;"></i>בית</button>
                 <button class="button"><i class='fas fa-dog' style="font-size: 30px;"></i>הכלב-שלי</button>                            
                 <button class="button"><i  class="fa fa-map" style="font-size: 25px;"></i> Map</button>
                 <button class="button"><i class="fa fa-battery-full" style="font-size: 25px;"></i> סוללה</button>

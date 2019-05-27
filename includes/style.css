@@ -2,6 +2,7 @@
     margin: 0px;
     padding: 0px;
 }
+
   
 header,main,nav,article,aside,section,footer {
     display: block;}
@@ -12,38 +13,55 @@ body {
 }
 
 
-#layout main{
+#indexPage main{
     background: #ffffff;
-    padding-top: 110px;
+    padding-top: 120px;
+}
+
+
+#listDogsPage main{
+    background: #ffffff;
+    padding-top: 120px;
+}
+
+#myDoginfoPage main{
+    background: #ffffff;
+    padding-top: 120px;
+    margin: auto;
 }
 
 
 .navHeader{
-    display: flex;
-    width: 100%;
+    float: right;
     height: 30px; 
-
 }
+
 ul {
     list-style-type: none;
     margin-top: 5px;
 }
   
-li {
+nav li {
     float: left;
+    list-style: none;
 }
-  
-li a {
-    color: white;
+nav a {    
+    color: #000000;
+    font-weight: bold;
+    letter-spacing: 4px;
+    text-transform: uppercase;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
+
   
 li a:hover {
     background-color: #3e8e41;
 }
 
+.h3ONmq{display: none;}
+.navlayout2-3-4{display: block;}
 
 
 
@@ -231,16 +249,23 @@ header{
 }
 
 .secHeader{
+    margin-top: 80px;
+    width: 100%;
     float: right;
-    margin-top: 6.3%;
     padding-right: 30px;
+    background-color: #ffffff;
 }
 
-h3{
-    color: #ffffff;
+.Hh3{
+    height: 30px;
+    color: #000000;
     font-weight: bold;
     font-size: 20px;
     text-align: center;
+}
+#myDoginfoPage .Hh3{
+    margin-top: 1px;
+
 }
 
 /*--------main----------*/
@@ -307,6 +332,8 @@ h3{
 
 .HomeScrenWEB{
     display: block;
+    background-image: url('/images/open.png');
+    background-size: cover;
     background-color: #d3d3d3;
     margin-top: 7%;
     margin-right: 2%;
@@ -614,6 +641,25 @@ h3{
 }
 
 
+.goBack{
+    width:10%;
+    display: none;
+    float: right;
+    font-size: 30px;
+    border: none;
+    background-color: #ffffff;
+    margin-top: 2px;
+}
+.h3ONmq{display: none;}
+
+.navbar{background:#222222;}
+.nav-item::after{content:'';display:block;width:0px;height:2px;background:#3e8e41;transition: 0.2s;}
+.nav-item:hover::after{width:100%;}
+.navbar-dark .navbar-nav .active > .nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show > .nav-link,.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover{color:#fec400;}
+.nav-link{padding:15px 5px;transition:0.2s;}
+.dropdown-item.active, .dropdown-item:active{color:#212529;}
+.dropdown-item:focus, .dropdown-item:hover{background:#3e8e41;}
+
 
 
 
@@ -621,15 +667,47 @@ h3{
 
 /*-------------layout3----------------*/
 
-
-.hide-bullets {
-    list-style:none;
-    margin-left: -40px;
-    margin-top:20px;
-
+.text-right{
+    display: block;
+    float: right;;
+    width: 33%;
+    height: 100vh;
+}
+.text-right p{
+    text-align: right;
+    margin: 0 0 10px
 }
 
+.text-right button{
+    width: 30px;
+    height: 30px;
+    border-radius: 10%;
+    float: left;
+}
 
+.right-info{
+    display: block;
+    float: right;;
+    padding: 10px;
+    width: 50%;
+    height: 30vh;
+}
+
+.left-info{
+    display: block;
+    float: right;;
+    padding: 10px;
+    width: 50%;
+    height: 30vh;
+}
+.main-info{
+    display: block;
+    float: right;;
+    height: 70vh;
+    width: 100%;
+    padding: 20px;
+    border:2px solid #d3d3d3;
+}
 
 
 /*-------------------------------------*/
@@ -648,6 +726,8 @@ h3{
     .HomeScrenWEB{display: none;}
     .HomeScren{display: block;}
 
+    .secHeader{padding-right: 0px;}
+
     .navHeader{
         display: block;
         text-align: center;
@@ -660,21 +740,41 @@ h3{
     .infoDOGbody a{display: none;}
     .dogData{padding: 0px; margin-bottom: 0px;}
     
-    .but-add-dog{color: #000000; border: 3px solid #000000; background-color: #ffffff;}
+    .but-add-dog{color: #3e8e41; border: 3px solid #000000; background-image: url('/images/add-dog.svg');}    
+    .but-add-dog:hover{ color: #3e8e41; border: 3px solid #000000; background-image: url('/images/add2-dog.svg');}
     .dogDataAdd{border: 0px; background: #ffffff;}
     .DOGbodyADD h4{display: none;}
     .infoDOGadd img{display: none;}
+
+
+    
+    .goBack{display: block;}
+    .h3ONmq{display: block;}
+    .navlayout2-3-4{display: none;}
+    #listDogsPage .navHeader{display: none;}
+
+    #myDoginfoPage .navHeader{display: none;}
+    
 }
+
+
+@media (max-width: 550px) {
+    nav a{font-size: 12px;}
+}
+
+
 
 @media (max-width: 580px) {
     .Hdog, .Hfetch{font-size: 25px;}
     #logoIMG{width: 40px; height: 40px;}
     .paw1,.paw2{font-size: 30px;}
+
 }
 
 @media (max-width: 1010px) {
 
     .helloUSER{display: none;}
+
 
 }
 
@@ -682,8 +782,12 @@ h3{
 @media (max-width: 736px) {
     .search input{display: none;}
     .scqar{display: block;}
+    .text-right{width: 100%;}
+}
 
+@media (max-width: 700px) {
 
+    .text-right{width: 100%;}
 }
 
 
