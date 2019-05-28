@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>DogFetch</title>
+        <link rel="stylesheet" href="includes/style.css">
+        <mata charset= "UTF-8"></mata>
+
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <body id="myDoginfoPage">
+        <header>
+
+            <section class="firstHeader">
+                <div class="humborger">                        
+                    <span></span> 
+                    <span></span>                         
+                    <span></span> 
+                </div>
+                    
+                    
+                <div  class="bell"> <i class="fa fa-bell"   style="font-size:25px; display: block;"></i></div>                               
+                    
+                <form class="search" action="#.php">
+                    <button class="searchButt" type="submit"><i class="fa fa-search"></i></button>
+                    <input type="text" placeholder="Search.." name="search">
+                </form>
+                                    
+                <div class="helloUSER">
+                    <h4>ערב טוב שרון</h4>
+                </div>
+                    
+                <div id="Logo">
+                        <span class='fas fa-paw paw1'></span>
+                        <h1 class="Hdog">Dog </h1>
+                        <span class="logoIMG"></span> 
+                        <h1 class="Hfetch"> Fetch</h1> 
+                        <span class='fas fa-paw paw2'></span>    
+                    </div>
+                </section>
+                    
+            
+            <section class="secHeader"> 
+                <button class="goBack" onclick="goBackTOlist()"><i class="fa fa-arrow-right"></i></button>
+                <h3 class="Hh3-header h3ONmq">גולי כדור פרווה</h3>
+            
+                <div class="navHeader"> 
+                    <nav>
+                        <ul>
+                            <li><a href="#">נתונים</a></li>
+                            <li><a href="#">דוח מעקבים</a></li>
+                            <li><a href="#">GPS מעקב </a></li>
+                            <li><a  href="#">Wifi מעקב</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </section>
+            
+        </header>
+
+        <main>
+            <div class="container">
+                <div class="col-xs-20 col-md-10 col-md-offset-3 col-xs-offset-3">
+                    <form class="form-horizontal" role="form">
+                        <fieldset>
+                        <div class="form-row">
+                            <div class="form-group  col-xs-10 col-md-7">
+                                <label >שם</label>
+                                <input type="text" class="form-control" name="name" value="" placeholder="שם" required pattern="[A-Za-z]">
+                            </div>
+                        </div>
+                    </fieldset>
+                            <fieldset>
+                        <div class="form-group col-xs-5 col-md-3">
+                            <label>גזע</label>
+                            <select class="form-control" name="breed" value="">
+                                <option>בחר גזע</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                        <div class="form-group  col-xs-2 col-md-2"></div>
+                            <div class="form-row">
+                                <div class="form-group  col-xs-5 col-md-3">
+                                    
+                                    <label > גיל</label>
+                                    <input type="text" class="form-control" name="age" value="" placeholder="גיל" pattern="[0-9]">
+                                </div>
+                            </div>
+                    </fieldset>
+                    <fieldset>
+                        <div class="form-row">
+                            <div class="form-group  col-xs-3 col-md-2">        
+                                <label >גובה</label>
+                                <input type="text" class="form-control" name="height" value="" placeholder="גובה"  pattern="[0-9]">
+                            </div>
+                        </div>
+
+                        <div class="form-group  col-xs-2 col-md-2"></div>
+
+                        <div class="form-row">
+                            <div class="form-group  col-xs-3 col-md-2">
+                                <label >משקל</label>
+                                <input type="text" class="form-control" name="weight" value="" placeholder="משקל"  pattern="[0-9]">
+                            </div>
+                        </div>
+
+                        <div class="form-group  col-xs-2 col-md-1"></div>
+
+                        <div class="form-row">
+                            <div class="form-group  col-xs-6 col-md-2">
+                                <label class="radio">מין</label>        
+                                <label class="radio-inline">
+                                    <input type="radio" name="gender" id="inlineRadio1" value="male"> זכר
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="gender" id="inlineRadio2" value="female"> נקבה
+                                </label>
+                                </div>
+                            </div>
+    
+                    </fieldset>
+                    <fieldset>
+                        <div class="form-row">
+                            <div class="form-group  col-xs-10 col-md-7">
+                                <label >מספר צ'יפ</label>
+                                <input type="text" class="form-control" name="chipId" value="" placeholder="שם" required pattern="[0-9]" minlength="15" maxlength="15" required>
+                            </div>
+                        </div>
+                        <div class="form-group  col-xs-10 col-md-7">
+                            <label >תמונות</label>
+                            <input type="file" class="form-control" id="input" name="pics" value="" placeholder="" multiple accept="image/*">
+                        </div>
+                        
+                    </fieldset>
+                       <div class="form-row">
+                                <div class="form-group  col-xs-5 col-md-3 col-md-offset-3 ">
+                                    <input type="submit" class="form-control col-md-offset-10 col-xs-offset-7 btn btn-primary" value="הוסף">
+                                </div>
+                    </form>
+                </div>
+            </div>
+
+                
+        </main>
+
+        <footer>
+            <div class="btn-group-footer">
+                <button class="button" onclick="pageIndex()"><i class="fa fa-home" style="font-size: 25px;"></i>בית</button>
+                <button class="button"><i class='fas fa-dog' style="font-size: 30px;"></i>הכלב-שלי</button>                            
+                <button class="button"><i  class="fa fa-map" style="font-size: 25px;"></i> Map</button>
+                <button class="button"><i class="fa fa-battery-full" style="font-size: 25px;"></i> סוללה</button>
+            </div>
+        </footer>
+
+        <script src="./includes/script.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    </body>
+</html>

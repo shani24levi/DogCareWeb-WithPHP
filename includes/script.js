@@ -26,6 +26,25 @@ function goBackTOlist() {
 
 
 
+
+function myFunction() {
+    var x = document.getElementById("myLinks");
+    var x2= document.getElementById("Logo");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+      x2.style.display= "block";
+
+    } else {
+      x.style.display = "block"; 
+      x2.style.display= "none";
+
+     
+
+    }
+}
+
+
+
 /*for galary - page 'myDoginfoPage.html' */
 jQuery(document).ready(function($) {
  

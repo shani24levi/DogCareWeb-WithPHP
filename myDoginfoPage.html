@@ -40,24 +40,24 @@
                     <h4>ערב טוב שרון</h4>
                 </div>
                     
-                <div class="Logo">
-                    <span class='fas fa-paw paw1'></span>
-                    <h1 class="Hdog">Dog </h1>
-                    <span id="logoIMG"></span> 
-                    <h1 class="Hfetch"> Fetch</h1> 
-                    <span class='fas fa-paw paw2'></span>    
-                </div>
-            </section>
+                <div id="Logo">
+                        <span class='fas fa-paw paw1'></span>
+                        <h1 class="Hdog">Dog </h1>
+                        <span class="logoIMG"></span> 
+                        <h1 class="Hfetch"> Fetch</h1> 
+                        <span class='fas fa-paw paw2'></span>    
+                    </div>
+                </section>
                     
             
             <section class="secHeader"> 
                 <button class="goBack" onclick="goBackTOlist()"><i class="fa fa-arrow-right"></i></button>
-                <h3 class="Hh3 h3ONmq">גולי כדור פרווה</h3>
+                <h3 class="Hh3-header h3ONmq">גולי כדור פרווה</h3>
             
                 <div class="navHeader"> 
                     <nav>
-                        <ul>
-                            <li><a href="#">נתונים</a></li>
+                        <ul class="NOunderline">
+                            <li><a  href="#">נתונים</a></li>
                             <li><a href="#">דוח מעקבים</a></li>
                             <li><a href="#">GPS מעקב </a></li>
                             <li><a  href="#">Wifi מעקב</a></li>
@@ -71,86 +71,78 @@
         <main>
             <div class="container">
                 <div id="main_area">
-                    <div class="row">
-                        <div class="col-xs-12" id="slider">
-                            <div class="row">
-                                <div class="col-sm-8" id="carousel-bounding-box">
-                                    <div class="carousel slide" id="myCarousel">
+                    <div class="col-xs-12" id="slider">
+                        <div class="row">
+                            <div class="col-sm-8" id="carousel-bounding-box">
+                                <div class="carousel slide" id="myCarousel">
 
-                                        <div class="carousel-inner">
-                                            <div class="active item" data-slide-number="0"><img src="images//d1.jpg"></div>
-                                            <div class="item" data-slide-number="1"><img src="images/d666.jpg"></div>
-                                            <div class="item" data-slide-number="2"><img src="images/d2.jpg"></div>
-                                             <div class="item" data-slide-number="3"><img src="images/d3.jpg"></div>
-                                            <div class="item" data-slide-number="4"><img src="images/d4.jpg"></div>
-                                            <div class="item" data-slide-number="5"><img src="images/d5.png"></div>
-                                        </div>
+                                    <div class="carousel-inner">
+                                        <div class="active item" data-slide-number="0"><img src="images//d1.jpg"></div>
+                                        <div class="item" data-slide-number="1"><img src="images/d666.jpg"></div>
+                                        <div class="item" data-slide-number="2"><img src="images/d2.jpg"></div>
+                                         <div class="item" data-slide-number="3"><img src="images/d3.jpg"></div>
+                                        <div class="item" data-slide-number="4"><img src="images/d4.jpg"></div>
+                                        <div class="item" data-slide-number="5"><img src="images/d5.png"></div>
+                                    </div>
 
-                                        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                                            <span class="glyphicon glyphicon-chevron-left"></span>                                       
-                                        </a>
-                                        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                                            <span class="glyphicon glyphicon-chevron-right"></span>                                       
-                                        </a>                                
-                                    </div>
-                                </div>
-                
-                                <div class="text-right" >
-                                    <div class="right-info">
-                                        <button class="fa fa-pencil-square-o"></button>
-                                        <p>שם: <b>גולי</b></p>
-                                        <p>גיל:<b>9 שנים</b></p>
-                                        <p>גזע: <b>לברדור מוערב</b> </p>
-                                        <p>משקל: <b>23 קילו</b></p>
-                                        <p>מספר ציפ: <b>77665568</b></p>
-                                    </div>
-                                    <div class="left-info">
-                                        <button class="fa fa-pencil-square-o"></button>
-                                        <p>מעורבת יפייפיה שנקשרת מהר וזקוקה להמון אהבה וחיזוקים</p>
-                                        <p>.מחונכת אך נוטה לפחד שנישארת לבד בבית ומרעישה בקולי קולות</p>
-                                    </div>
-                                    <div class="main-info">
-                                        <button class="fa fa-pencil-square-o"></button>
-                                        <p><b>בעיית משמעת: </b> בעת שהות ממושכת לבד</p>
-                                        <p><b>התמקדות שהוגדרה:</b> נביחות, שריטות \ קירבה בתחום דלת כניסה</p>
-                                        <p><b>טיפול שהוגדר:</b>הפעלת שמע,חיבור מצלמה ביתית</p>
-                                        <p><b>טיפול מערכת אוטומטי:</b>מופעל שמע "הקלטה6" כבעבור 4 דקות לדציבל מעל 2</p>
-                                        <p><b>הגדרת אזור אסור:</b>דלת כניסה, החדר של רון</p><br>
-                                        <p><b>רשימת ההקלטות שלי</b></p>
-
-                                        <div class="panel panel-default audio-panel">
-                                            <audio id="audio" autoplay preload="auto" tabindex="0" controls>
-                                                <source src="#">
-                                            </audio>
-                                        </div>
-                                        
-                                        <ul id="playlist" class="playLIST1">    
-                                            <li class="active list-group-item"><a href="#">הקלטה 1</a></li>
-                                            <li class="list-group-item"><a href="#">הקלטה 2</a></li>
-                                            <li class="list-group-item"><a href="#">הקלטה 3</a></li>      
-                                        </ul>
-                                    </div>
-                                </div>
-
-
-                                <div class="row hidden-xs" id="slider-thumbs">
-                                    <!-- Bottom switcher of slider -->
-                                    <ul class="hide-bullets">
-                                        <li class="col-sm-2"><a class="thumbnail" id="carousel-selector-0"><img src="images/d1.jpg"></a></li>
-                                        <li class="col-sm-2"><a class="thumbnail" id="carousel-selector-1"><img src="images/d666.jpg"></a></li>
-                                        <li class="col-sm-2"><a class="thumbnail" id="carousel-selector-2"><img src="images/d2.jpg"></a></li>              
-                                    </ul>  
-                                    
-                                    <div class="row hidden-xs" id="slider-thumbs">
-                                        <!-- Bottom switcher of slider -->
-                                        <ul class="hide-bullets">  
-                                            <li class="col-sm-2"><a class="thumbnail" id="carousel-selector-3"><img src="images/d3.jpg"></a></li>               
-                                            <li class="col-sm-2"><a class="thumbnail" id="carousel-selector-4"><img src="images/d4.jpg"></a></li>                                               
-                                            <li class="col-sm-2"><a class="thumbnail" id="carousel-selector-5"><img src="images/d5.png"></a></li>
-                                        </ul>   
-                                    </div>
+                                    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                                        <span class="glyphicon glyphicon-chevron-left"></span>                                       
+                                    </a>
+                                    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                                        <span class="glyphicon glyphicon-chevron-right"></span>                                       
+                                    </a>                                
                                 </div>
                             </div>
+                
+                            <div class="text-right" >
+                                <div class="right-info">
+                                    <button class="fa fa-pencil-square-o"></button>
+                                    <p>שם: <b>גולי</b></p>
+                                    <p>גיל:<b>9 שנים</b></p>
+                                    <p>גזע: <b>לברדור מוערב</b> </p>
+                                    <p>משקל: <b>23 קילו</b></p>
+                                    <p>מספר ציפ: <b>77665568</b></p>
+                                </div>
+                                <div class="left-info">
+                                    <button class="fa fa-pencil-square-o"></button>
+                                    <p>מעורבת יפייפיה שנקשרת מהר וזקוקה להמון אהבה וחיזוקים</p>
+                                    <p>.מחונכת אך נוטה לפחד שנישארת לבד בבית ומרעישה בקולי קולות</p>
+                                </div>
+                                <div class="main-info">
+                                    <button class="fa fa-pencil-square-o"></button>
+                                    <p><b>בעיית משמעת: </b> בעת שהות ממושכת לבד</p>
+                                    <p><b>התמקדות שהוגדרה:</b> נביחות, שריטות \ קירבה בתחום דלת כניסה</p>
+                                    <p><b>טיפול שהוגדר:</b>הפעלת שמע,חיבור מצלמה ביתית</p>
+                                    <p><b>טיפול מערכת אוטומטי:</b>מופעל שמע "הקלטה6" כבעבור 4 דקות לדציבל מעל 2</p>
+                                    <p><b>הגדרת אזור אסור:</b>דלת כניסה, החדר של רון</p><br>
+                                    <p><b>רשימת ההקלטות שלי</b></p>
+
+                                    <div class="panel panel-default audio-panel">
+                                        <audio id="audio" autoplay preload="auto" tabindex="0" controls>
+                                            <source src="#">
+                                        </audio>
+                                    </div>
+                                        
+                                    <ul id="playlist" class="playLIST1">    
+                                        <li class="active list-group-item"><a href="#">הקלטה 1</a></li>
+                                        <li class="list-group-item"><a href="#">הקלטה 2</a></li>
+                                        <li class="list-group-item"><a href="#">הקלטה 3</a></li> 
+     
+                                    </ul>
+                                </div>
+                            </div> 
+                                
+                            <div class="row hidden-xs" id="slider-thumbs" style="float: left; width: 67%;" >
+                                <!-- Bottom switcher of slider -->
+                                <ul class="hide-bullets">
+                                    <li class="col-sm-2"><a class="thumbnail" id="carousel-selector-0"><img src="images/d1.jpg"></a></li>
+                                    <li class="col-sm-2"><a class="thumbnail" id="carousel-selector-1"><img src="images/d666.jpg"></a></li>
+                                    <li class="col-sm-2"><a class="thumbnail" id="carousel-selector-2"><img src="images/d2.jpg"></a></li>  
+                                    <li class="col-sm-2"><a class="thumbnail" id="carousel-selector-3"><img src="images/d3.jpg"></a></li>               
+                                    <li class="col-sm-2"><a class="thumbnail" id="carousel-selector-4"><img src="images/d4.jpg"></a></li>                                               
+                                    <li class="col-sm-2"><a class="thumbnail" id="carousel-selector-5"><img src="images/d5.png"></a></li>                
+                                </ul> 
+                             </div> 
                         </div>
                     </div>
                 </div>

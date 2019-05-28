@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>DogFetch</title>
+        <link rel="stylesheet" href="includes/style.css">
+        <mata charset= "UTF-8"></mata>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <body id="listDogsPage" >
+        <header>
+
+            <section class="firstHeader">
+                <div class="humborger">                        
+                    <span></span> 
+                    <span></span> 
+                    <span></span> 
+                </div>
+        
+        
+                <div  class="bell"> <i class="fa fa-bell"   style="font-size:25px; display: block;"></i></div>                               
+        
+                <form class="search" action="#.php">
+                    <button class="searchButt" type="submit"><i class="fa fa-search"></i></button>
+                    <input type="text" placeholder="Search.." name="search">
+                </form>
+                        
+                <div class="helloUSER">
+                    <h4>ערב טוב שרון</h4>
+                </div>
+        
+                <div id="Logo">
+                        <span class='fas fa-paw paw1'></span>
+                        <h1 class="Hdog">Dog </h1>
+                        <span class="logoIMG"></span> 
+                        <h1 class="Hfetch"> Fetch</h1> 
+                        <span class='fas fa-paw paw2'></span>    
+                    </div>
+                </section>
+        
+  
+            <section class="secHeader"> 
+                <button class="goBack" onclick="goBackTOindex()"><i class="fa fa-arrow-right"></i></button>
+                <h3 class="Hh3-header h3ONmq">הנקודות האסורות שלי</h3>
+
+                <div class="navHeader"> 
+                    <nav>
+                        <ul>
+                            <li><a href="#">נתונים</a></li>
+                            <li><a href="#">דוח מעקבים</a></li>
+                            <li><a href="#">GPS מעקב </a></li>
+                            <li><a  href="#">Wifi מעקב</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </section>
+
+
+        </header>
+
+        <main>
+            <div>
+                <div class="Data">
+                    <div class="info">                                        
+                        <button  style="float: right; margin-left:20px;" onclick="myDogINFO()"><img src="images/spot2.png"></button>
+
+                        <div class="infobody">
+                                    
+                            <h4><b>שם נקודה:</b> החדר של רון</h4>
+                            <div class="firstP">
+                                <p>
+                                    <b>נקודה מחוברת למכשיר:</b>481<br>
+                                    <b>מופעל עבור: </b>גולי כדור פרווה<br>
+                                    <b>מצב התראה </b>לא הוגדר<br>
+                                </p>
+                            </div>
+        
+                            <div class="secP">
+                                <p>
+                                    <b>מיקום הנקודה: </b>28999021.86, 2889983665<br>
+                                    <b>טווח מוגדר: </b>רדיוס 4 מטר<br>
+                                    <b>זמן הפעלת התראה: </b>לאחר 2 דקות<br>                                
+                                </p>
+                            </div>
+        
+                            <DIV class="terdP">
+                                <p><b>הפעלת טיפול מערכת: </b>מופסק</p></DIV>
+        
+        
+                            <div class="row1">
+                                <div class="span8">
+        
+                                    <p></p>
+                                    <p>
+                                        <a href="#" style="float: right; margin-right: 20px;"><span class="btn btn-primary btn-xs" >ערוך</span></a> 
+                                        <a href="#" style="float: right; margin-left: 10px;"><span class="btn btn-primary btn-xs">מחק</span></a> 
+                                        <span style="float: right; margin-left: 10px;"><i class="fa fa-user" style="float: right; margin-left: 5px;"></i> |נוצר על ידי: שרון בן-גל</span> 
+                                        <span style="float: right; margin-left: 10px;"><i class="fa fa-calendar" style="float: right;margin-left: 5px"></i>| ב12 לאוקטובר 2018</span> 
+                                        <span style="float: right;"><i class="far fa-envelope" style="float: right; margin-left: 5px"></i> בוצעו 3 התראות מנקודה חמה 1</span> 
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+
+
+                <div class="Data">
+                    <div class="info">
+                        <button  style="float: right; margin-left:20px;" onclick="myDogINFO()"><img src="images/spot1.PNG"></button>
+                        <div class="infobody">
+                                
+                            <h4><b>שם נקודה:</b> ספה ליד האקוריום</h4>
+                            <div class="firstP">
+                                <p>
+                                    <b>נקודה מחוברת למכשיר:</b>481<br>
+                                    <b>מופעל עבור: </b>גולי כדור פרווה<br>
+                                    <b>מצב התראה </b>לא הוגדר<br>
+                                </p>
+                            </div>
+    
+                            <div class="secP">
+                                <p>
+                                    <b>מיקום הנקודה: </b>28999021.86, 2889983665<br>
+                                    <b>טווח מוגדר: </b>רדיוס 4 מטר<br>
+                                    <b>זמן הפעלת התראה: </b>לאחר 2 דקות<br>                                
+                                </p>
+                            </div>
+    
+                            <DIV class="terdP">
+                            <p><b>הפעלת טיפול מערכת: </b>מופסק</p></DIV>
+    
+    
+                            <div class="row1">
+                                <div class="span8">
+    
+                                    <p></p>
+                                    <p>
+                                        <a href="#" style="float: right; margin-right: 20px;"><span class="btn btn-primary btn-xs" >ערוך</span></a> 
+                                        <a href="#" style="float: right; margin-left: 10px;"><span class="btn btn-primary btn-xs">מחק</span></a> 
+                                        <span style="float: right; margin-left: 10px;"><i class="fa fa-user" style="float: right; margin-left: 5px;"></i> |נוצר על ידי: שרון בן-גל</span> 
+                                        <span style="float: right; margin-left: 10px;"><i class="fa fa-calendar" style="float: right;margin-left: 5px"></i>| ב12 לאוקטובר 2018</span> 
+                                        <span style="float: right;"><i class="far fa-envelope" style="float: right; margin-left: 5px"></i> בוצעו 3 התראות מנקודה חמה 2</span> 
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+    
+                <div class="DataAdd">
+                    <div class="infoadd">
+                        <button class="but-add-dot">+</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="btn-group-footer">
+                <button class="button" onclick="pageIndex()"><i class="fa fa-home" style="font-size: 25px;"></i>בית</button>
+                <button class="button"><i class='fas fa-dog' style="font-size: 30px;"></i>הכלב-שלי</button>                            
+                <button class="button"><i  class="fa fa-map" style="font-size: 25px;"></i> Map</button>
+                <button class="button"><i class="fa fa-battery-full" style="font-size: 25px;"></i> סוללה</button>
+            </div>
+        </footer>
+
+        <script src="./includes/script.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    </body>
+</html>
+
+
+
+
+

@@ -24,6 +24,8 @@ body {
     padding-top: 120px;
 }
 
+
+
 #myDoginfoPage main{
     background: #ffffff;
     padding-top: 120px;
@@ -51,7 +53,7 @@ nav a {
     letter-spacing: 4px;
     text-transform: uppercase;
     text-align: center;
-    padding: 14px 16px;
+    padding: 14px 19px;
     text-decoration: none;
 }
 
@@ -60,7 +62,7 @@ li a:hover {
     background-color: #3e8e41;
 }
 
-.h3ONmq{display: none;}
+.h3ONmq{display: none; margin-top: 15px;}
 .navlayout2-3-4{display: block;}
 
 
@@ -84,7 +86,6 @@ header{
     position: absolute;
     width: 100%;
     height: 50%;
-    margin-top: 1%;
 }
 
 
@@ -96,6 +97,39 @@ header{
     margin-top: 6px;
     width: 50px;
     height: 50px;
+}
+
+#myLinks{
+    display: none;
+    float: right;
+    overflow: hidden;
+    background-color:#ffffff ;
+    border: 2px solid #000000;
+    position: relative;
+    margin-top: 50px;
+    width: 60%;
+    margin-top: 13px;
+}
+#myLinks a {
+    color: #000000;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+    text-align: right;
+    margin: 0 0 5px;
+}
+
+#myLinks a:hover {
+    background-color: rgb(217, 243, 220);;
+    color: black;
+}
+
+.imagHumborger{
+    float: right;
+    width: 25px;
+    height: 25px;
+    margin-left: 20px;
 }
 
 
@@ -192,20 +226,21 @@ header{
 }
 
 
-.Logo{
+#Logo{
+    display: block;
     float: right;
     height: 55px;
-    margin-right: 7%;
+    margin-right: 5%;
 }
 
-.paw1{
+#Logo .paw1{
     float: left;
     font-size: 40px;
     color: #ffffff;
     margin-top: 7px;  
 }
 
-.paw2{
+#Logo .paw2{
     float: left;
     font-size: 40px;
     color: #ffffff;
@@ -214,17 +249,17 @@ header{
 }
 
 
-.Hdog{
+#Logo .Hdog{
     float: left;
+    font-size: 40px; 
     margin-left: 4px;
-    font-size: 40px;
     color: #ffffff;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
     margin-top: 7px;
 }
 
-.Hfetch {
+#Logo .Hfetch {
     float: left;
     font-size: 40px; 
     color: #ffffff;
@@ -234,7 +269,7 @@ header{
 
 }
 
-#logoIMG{
+#Logo .logoIMG{
     background-image: url(../images/logo.jpg);
     background-repeat: no-repeat;
     background-size: contain;
@@ -258,12 +293,18 @@ header{
 }
 
 .Hh3{
-    height: 30px;
+    font-size: 15px;
     color: #000000;
     font-weight: bold;
-    font-size: 20px;
     text-align: center;
-    margin-top: 10px;
+}
+
+.Hh3-header{
+    font-size: 20px;
+    margin-left: 80px;
+    color: #000000;
+    font-weight: bold;
+    text-align: center;
 }
 
 
@@ -437,8 +478,7 @@ header{
 }
 
 .BigIcon{
-    font-size: 80px;
-    margin: 20%;
+    margin: 12%;
 }
 
 .ImgIcon{
@@ -500,7 +540,7 @@ header{
     padding: 15px 32px;
   
     text-decoration: none;
-    font-size: 16px;
+    font-size: 15px;
     cursor: pointer;
     width: 120.8px;
     height: 65px;
@@ -531,7 +571,7 @@ header{
     margin-right: auto;
     margin-left: auto;
 }
-.dogData{
+.Data{
     min-height: 20px;
     padding: 19px;
     margin-bottom: 20px;
@@ -540,48 +580,48 @@ header{
     border-radius: 4px
 }
 
-.infoDOG{
+.info{
     overflow: hidden;
     margin-top: 15px;
 }
 
-.infoDOG a{
+.info a{
     float: right;
     margin-left: 10px;
 }
-.infoDOG img{
+.info img{
     display: block;
     width: 150px;
     height: 150pxl;
 }
-.infoDOGbody{
+.infobody{
     overflow: hidden;
 }
-.infoDOGbody h4{
+.infobody h4{
     text-align: right;
     margin: 0 0 5px;
     font-size:18px;
 }
-.infoDOGbody a{
+.infobody a{
     float: left;
     margin: 0 0 5px;
     font-size:18px;
 }
 
-.infoDOGbody p{
+.infobody p{
     text-align: right;
     margin: 0 0 10px;
 
 }
 
-.infoDOGbody ul{
+.infobody ul{
     float: right;
     margin-left: -5px;
     margin-top: 5px;
 
 }
 
-.infoDOGbody li{
+.infobody li{
 
     float: left;
     padding-right: 5px;
@@ -606,35 +646,52 @@ header{
 }
 
 
-.dogDataAdd{
+.but-add-dot{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+    border: 1px solid #e3e3e3;
+    margin-right: 90%;
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    color: #e3e3e3;
+}
+.but-add-dot:hover{
+    background-color: #3e8e41;
+}
+
+.DataAdd{
     min-height: 20px;
     padding: 19px;
     margin-bottom: 20px;
     background-color: #f5f5f5;
     border: 1px solid #e3e3e3;
     border-radius: 4px;
-    width: 96%;
+    width: 100%;
 }
 
-.infoDOGadd{
+.infoadd{
     overflow: hidden;
     margin-top: 15px;
 
 }
 
-.infoDOGadd a{
+.infoadd a{
     float: right;
     margin-left: 10px;
 }
-.infoDOGadd img{
+.infoadd img{
     display: block;
     width: 150px;
     height: 150pxl;
 }
-.DOGbodyADD{
+.bodyADD{
     overflow: hidden;
 }
-.DOGbodyADD h4{
+.bodyADD h4{
     text-align: right;
     margin: 0 0 5px;
     font-size:18px;
@@ -708,6 +765,11 @@ header{
     padding: 20px;
     border:2px solid #d3d3d3;
 }
+.NOunderline a:hover{
+    text-decoration: none;
+    color: #000000
+}
+
 
 
 .copy{
@@ -736,6 +798,47 @@ a:hover{
     text-decoration: none;
 }
 
+/* =------layout5----------*/
+.firstP{
+    float: right; 
+    width:30%;
+}
+.secP{
+    float: right; 
+    width:30%;
+}
+.terdP{
+    float: right; 
+    width:30%;
+}
+
+.row1{
+    float: right;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.showAll{
+    display: none;
+    position: absolute;
+    float: left;
+    margin-top: 26%;
+    margin-left: 2%;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.smallScren{
+    float: right; 
+    margin-left:20px;
+    width: 20px;
+    height: 30px;
+    background-color: #e3e3e3;
+
+}
+
+
 
 /*-------------------------------------*/
 
@@ -758,30 +861,44 @@ a:hover{
     .navHeader{
         display: block;
         text-align: center;
+        margin-top: 5px;
     }
     .humborger{display: block;}
     .btn-group-footer {display: block;}
     footer{display: block}
 
-    .infoDOGbody ul{display: none;}
-    .infoDOGbody a{display: none;}
-    .dogData{padding: 0px; margin-bottom: 0px;}
+    .infobody ul{display: none;}
+    .infobody a{display: none;}
+    .Data{padding: 0px; margin-bottom: 0px;}
     
     .but-add-dog{color: #3e8e41; border: 3px solid #000000; background-image: url('/images/add-dog.svg');}    
     .but-add-dog:hover{ color: #3e8e41; border: 3px solid #000000; background-image: url('/images/add2-dog.svg');}
-    .dogDataAdd{border: 0px; background: #ffffff;}
-    .DOGbodyADD h4{display: none;}
-    .infoDOGadd img{display: none;}
+        
+    .but-add-dot{color: #3e8e41; border: 3px solid #000000;}    
+    .but-add-dot:hover{ color: #d3d3d3; border: 3px solid #000000;}
+    .DataAdd{border: 0px; background: #ffffff;}
+    .bodyADD h4{display: none;}
+    .infoadd img{display: none;}
 
 
     
     .goBack{display: block;}
+    #listDogPage .goBack{margin-top: 5%;}
     .h3ONmq{display: block;}
     .navlayout2-3-4{display: none;}
     #listDogsPage .navHeader{display: none;}
 
     #myDoginfoPage .navHeader{display: none;}
-    
+   
+    .firstP{width: 80%;}
+    .secP {display: none;}
+    .terdP{display: none;}
+    .row1{margin-right: 0px; font-size: 60%}
+    .DeletAdd{ display: block; float: left; margin-top: 4%;}
+    #listDogPage h4{font-size: 15px;}
+    .showAll{
+        display: block;}
+
 }
 
 
@@ -792,10 +909,11 @@ a:hover{
 
 
 @media (max-width: 580px) {
-    .Hdog, .Hfetch{font-size: 25px;}
-    #logoIMG{width: 40px; height: 40px;}
-    .paw1,.paw2{font-size: 30px;}
-
+    #Logo .Hdog{font-size: 25px;}
+    #Logo .Hfetch{font-size: 25px;}
+    #Logo .logoIMG{width: 40px; height: 40px;}
+    #Logo .paw1{font-size: 30px;}
+    #Logo .paw2{font-size: 30px;}
 }
 
 @media (max-width: 1010px) {
@@ -808,7 +926,6 @@ a:hover{
 
 @media (max-width: 736px) {
     .search input{display: none;}
-    .scqar{display: block;}
     .text-right{width: 100%;}
 }
 
