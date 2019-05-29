@@ -51,7 +51,7 @@
   
             <section class="secHeader"> 
                 <button class="goBack" onclick="goBackTOindex()"><i class="fa fa-arrow-right"></i></button>
-                <h3 class="Hh3-header h3ONmq">הכלבים שלי</h3>
+                <h3 class="Hh3-header h3ONmq">כלב נוסף</h3>
 
                 <div class="navHeader"> 
                     <nav>
@@ -69,7 +69,7 @@
         </header>
 
         <main>
-            <div class="container">
+            <div class="container2">
                 <div class="col-xs-20 col-md-10 col-md-offset-4 col-xs-offset-3">
                      <?php 
                     $myFile = "dogsData.json";
