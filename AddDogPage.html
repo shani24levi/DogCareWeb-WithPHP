@@ -52,12 +52,12 @@
             
             <section class="secHeader"> 
                 <button class="goBack" onclick="goBackTOlist()"><i class="fa fa-arrow-right"></i></button>
-                <h3 class="Hh3-header h3ONmq">גולי כדור פרווה</h3>
+                <h3 class="Hh3-header h3ONmq">הוספת כלב חדש</h3>
             
                 <div class="navHeader"> 
                     <nav>
-                        <ul>
-                            <li><a href="#">נתונים</a></li>
+                        <ul class="NOunderline">
+                            <li><a  href="#">נתונים</a></li>
                             <li><a href="#">דוח מעקבים</a></li>
                             <li><a href="#">GPS מעקב </a></li>
                             <li><a  href="#">Wifi מעקב</a></li>
@@ -71,90 +71,93 @@
         <main>
             <div class="container">
                 <div class="col-xs-20 col-md-10 col-md-offset-3 col-xs-offset-3">
-                    <form class="form-horizontal" role="form">
+        
+                    <form class="form-horizontal" role="form" action="confirm.php" method="GET">
                         <fieldset>
-                        <div class="form-row">
-                            <div class="form-group  col-xs-10 col-md-7">
-                                <label >שם</label>
-                                <input type="text" class="form-control" name="name" value="" placeholder="שם" required pattern="[A-Za-z]">
-                            </div>
-                        </div>
-                    </fieldset>
-                            <fieldset>
-                        <div class="form-group col-xs-5 col-md-3">
-                            <label>גזע</label>
-                            <select class="form-control" name="breed" value="">
-                                <option>בחר גזע</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
-                        </div>
-                        <div class="form-group  col-xs-2 col-md-2"></div>
                             <div class="form-row">
-                                <div class="form-group  col-xs-5 col-md-3">
-                                    
-                                    <label > גיל</label>
-                                    <input type="text" class="form-control" name="age" value="" placeholder="גיל" pattern="[0-9]">
+                                <div class="form-group  col-xs-10 col-md-7">
+                                    <label class="moveName"> שם הכלב</label>
+                                    <input type="text" class="form-control" name="name" value="" placeholder="שם\כינוי" required pattern="[a-z]{1-20)">
                                 </div>
-                            </div>
-                    </fieldset>
-                    <fieldset>
-                        <div class="form-row">
-                            <div class="form-group  col-xs-3 col-md-2">        
-                                <label >גובה</label>
-                                <input type="text" class="form-control" name="height" value="" placeholder="גובה"  pattern="[0-9]">
-                            </div>
-                        </div>
-
-                        <div class="form-group  col-xs-2 col-md-2"></div>
-
-                        <div class="form-row">
-                            <div class="form-group  col-xs-3 col-md-2">
-                                <label >משקל</label>
-                                <input type="text" class="form-control" name="weight" value="" placeholder="משקל"  pattern="[0-9]">
-                            </div>
-                        </div>
-
-                        <div class="form-group  col-xs-2 col-md-1"></div>
-
-                        <div class="form-row">
-                            <div class="form-group  col-xs-6 col-md-2">
-                                <label class="radio">מין</label>        
-                                <label class="radio-inline">
-                                    <input type="radio" name="gender" id="inlineRadio1" value="male"> זכר
-                                </label>
-                                <label class="radio-inline">
-                                    <input type="radio" name="gender" id="inlineRadio2" value="female"> נקבה
-                                </label>
                                 </div>
-                            </div>
-    
-                    </fieldset>
-                    <fieldset>
-                        <div class="form-row">
-                            <div class="form-group  col-xs-10 col-md-7">
-                                <label >מספר צ'יפ</label>
-                                <input type="text" class="form-control" name="chipId" value="" placeholder="שם" required pattern="[0-9]" minlength="15" maxlength="15" required>
-                            </div>
-                        </div>
-                        <div class="form-group  col-xs-10 col-md-7">
-                            <label >תמונות</label>
-                            <input type="file" class="form-control" id="input" name="pics" value="" placeholder="" multiple accept="image/*">
-                        </div>
-                        
-                    </fieldset>
-                       <div class="form-row">
-                                <div class="form-group  col-xs-5 col-md-3 col-md-offset-3 ">
-                                    <input type="submit" class="form-control col-md-offset-10 col-xs-offset-7 btn btn-primary" value="הוסף">
+                            </fieldset>
+                                    <fieldset>
+                                <div class="form-group col-xs-5 col-md-3">
+                                    <label class="movetsec">גזע</label>
+                                    <select class="form-control" id="breed" name="breed" value="">
+                                        <option>בחר גזע</option>
+                                        <option>לברדור</option>
+                                        <option>פינצר</option>
+                                        <option>פיטבול</option>
+                                        <option>מעורב</option>
+                                        <option>אחר</option>
+                                    </select>
                                 </div>
-                    </form>
-                </div>
-            </div>
+                                <div class="form-group  col-xs-2 col-md-2"></div>
+                                    <div class="form-row">
+                                        <div class="form-group  col-xs-5 col-md-3">
+                                            
+                                            <label class="movetsec" > גיל</label>
+                                            <input type="text" class="form-control" name="age" value="" placeholder="גיל" pattern="[0-9]{1-2}">
+                                        </div>
+                                    </div>
+                            </fieldset>
+                            <fieldset>
+                                <div class="form-row">
+                                    <div class="form-group  col-xs-3 col-md-2">        
+                                        <label class="moveterth" >גובה</label>
+                                        <input type="text" class="form-control" name="height" value="" placeholder="גובה"  pattern="[0-9]{1-3}">
+                                    </div>
+                                </div>
+        
+                                <div class="form-group  col-xs-2 col-md-2"></div>
+        
+                                <div class="form-row">
+                                    <div class="form-group  col-xs-3 col-md-2">
+                                        <label class="moveterth">משקל</label>
+                                        <input type="text" class="form-control" name="weight" value="" placeholder="משקל"  pattern="[0-9]{1-3}">
+                                    </div>
+                                </div>
+        
+                                <div class="form-group  col-xs-2 col-md-1"></div>
+        
+                                <div class="form-row">
+                                    <div class="form-group  col-xs-6 col-md-2">
+                                        <label class="radio movesex">מין</label>        
+                                        <label class="radio-inline">
+                                            <input type="radio" name="gender" id="inlineRadio1" value="male" > זכר
+                                        </label>
+                                        <label class="radio-inline">
+                                            <input type="radio" name="gender" id="inlineRadio2" value="female"> נקבה
+                                        </label>
+                                        </div>
+                                    </div>
+            
+                            </fieldset>
+                            <fieldset>
+                                <div class="form-row">
+                                    <div class="form-group  col-xs-10 col-md-7">
+                                        <label class="movechip" >מספר צ'יפ</label>
+                                        <input type="text" class="form-control" name="chipId" value="" placeholder="מספר ברקורד" required pattern="[0-9]{15}" minlength="2" maxlength="15" required>
+                                    </div>
+                                </div>
+                                <div class="form-group  col-xs-10 col-md-7">
+                                    <label class="movepoto">תמונות</label>
+                                    <input type="file" class="form-control" id="input" name="pics" value="" placeholder="" multiple accept="image/*" >
+                                </div>
+                                
+                            </fieldset>
+                               <div class="form-row">
+                                        <div class="form-group  col-xs-5 col-md-3 col-md-offset-3 ">
+                                            <input type="submit" class="form-control col-md-offset-10 col-xs-offset-7 btn btn-primary" value="הוסף">
+                                        </div>
+                            </form>
+                        </div>
+                    </div>
+        
+         
 
-                
+
         </main>
 
         <footer>
@@ -167,6 +170,8 @@
         </footer>
 
         <script src="./includes/script.js"></script>
+        <script src="includes/addToList.js"></script>
+
         <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
         <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 

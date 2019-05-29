@@ -709,6 +709,7 @@ header{
 }
 .h3ONmq{display: none;}
 
+
 .navbar{background:#222222;}
 .nav-item::after{content:'';display:block;width:0px;height:2px;background:#3e8e41;transition: 0.2s;}
 .nav-item:hover::after{width:100%;}
@@ -764,6 +765,11 @@ header{
     width: 100%;
     padding: 20px;
     border:2px solid #d3d3d3;
+}
+
+.NOunderline {
+    margin-bottom: 3px;
+    color: #000000
 }
 .NOunderline a:hover{
     text-decoration: none;
@@ -839,6 +845,13 @@ a:hover{
 }
 
 
+.moveName{margin-left: 440px;}
+.movetsec{margin-left: 160px;}
+.movesex{margin-left: 800px;}
+.moveterth{margin-left: 80px;}
+.movechip{margin-left: 430px;}
+.movepoto{margin-left: 450px;}
+
 
 /*-------------------------------------*/
 
@@ -889,15 +902,31 @@ a:hover{
     #listDogsPage .navHeader{display: none;}
 
     #myDoginfoPage .navHeader{display: none;}
+    .layout4{ margin-top: 5px;}
+
    
     .firstP{width: 80%;}
     .secP {display: none;}
     .terdP{display: none;}
-    .row1{margin-right: 0px; font-size: 60%}
+    .row1{ font-size: 60%;}
     .DeletAdd{ display: block; float: left; margin-top: 4%;}
     #listDogPage h4{font-size: 15px;}
-    .showAll{
-        display: block;}
+    .showAll{display: block;}
+
+    .moveName{margin-left: 170px;}
+    .movetsec{margin-left: 80px;}
+    .moveterth{margin-left: 20px;}
+    .movesex{margin-left: 60px;}
+    .movechip{margin-left: 150px;}
+    .movepoto{margin-left: 160px;}
+
+    .Afix a{
+        display: block;
+        float: left; 
+    }
+
+ 
+
 
 }
 
