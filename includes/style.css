@@ -376,7 +376,7 @@ header{
 
 .HomeScrenWEB{
     display: block;
-    background-image: url('/images/open.png');
+    background-image: url('../images/open.png');
     background-size: cover;
     background-color: #d3d3d3;
     margin-top: 7%;
@@ -915,8 +915,8 @@ a:hover{
     .infobody a{display: none;}
     .Data{padding: 0px; margin-bottom: 0px;}
     
-    .but-add-dog{color: #3e8e41; border: 3px solid #000000; background-image: url('/images/add-dog.svg');}    
-    .but-add-dog:hover{ color: #3e8e41; border: 3px solid #000000; background-image: url('/images/add2-dog.svg');}
+    .but-add-dog{color: #3e8e41; border: 3px solid #000000; background-image: url('../images/add-dog.svg');}    
+    .but-add-dog:hover{ color: #3e8e41; border: 3px solid #000000; background-image: url('../images/add2-dog.svg');}
         
     .but-add-dot{color: #000000; border: 3px solid #000000;}    
     .but-add-dot:hover{ background-color: #3e8e41; color: #d3d3d3; border: 3px solid #000000;}
