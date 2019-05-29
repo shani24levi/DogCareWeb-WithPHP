@@ -15,45 +15,44 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 
-        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
 
-    <body id="myDoginfoPage">
+    <body id="listDogsPage">
         <header>
 
             <section class="firstHeader">
                 <div class="humborger">                        
                     <span></span> 
-                    <span></span>                         
+                    <span></span> 
                     <span></span> 
                 </div>
-                    
-                    
+        
+        
                 <div  class="bell"> <i class="fa fa-bell"   style="font-size:25px; display: block;"></i></div>                               
-                    
+        
                 <form class="search" action="#.php">
                     <button class="searchButt" type="submit"><i class="fa fa-search"></i></button>
                     <input type="text" placeholder="Search.." name="search">
                 </form>
-                                    
+                        
                 <div class="helloUSER">
                     <h4>ערב טוב שרון</h4>
                 </div>
-                    
-                <div class="Logo">
-                    <span class='fas fa-paw paw1'></span>
-                    <h1 class="Hdog">Dog </h1>
-                    <span id="logoIMG"></span> 
-                    <h1 class="Hfetch"> Fetch</h1> 
-                    <span class='fas fa-paw paw2'></span>    
-                </div>
+        
+                <div id="Logo">
+                        <span class='fas fa-paw paw1'></span>
+                        <h1 class="Hdog">Dog </h1>
+                        <span class="logoIMG"></span> 
+                        <h1 class="Hfetch"> Fetch</h1> 
+                        <span class='fas fa-paw paw2'></span>    
+                    </div>
             </section>
-                    
-            
+        
+  
             <section class="secHeader"> 
-                <button class="goBack" onclick="goBackTOlist()"><i class="fa fa-arrow-right"></i></button>
-                <h3 class="Hh3 h3ONmq">גולי כדור פרווה</h3>
-            
+                <button class="goBack" onclick="goBackTOindex()"><i class="fa fa-arrow-right"></i></button>
+                <h3 class="Hh3-header h3ONmq">הכלבים שלי</h3>
+
                 <div class="navHeader"> 
                     <nav>
                         <ul>
@@ -65,7 +64,8 @@
                     </nav>
                 </div>
             </section>
-            
+
+   
         </header>
 
         <main>
@@ -91,7 +91,8 @@
 	   if(file_put_contents($myFile, $jsondata)) {
             echo '<h2><br><br><br> המידע נשמר בהצלחה<br></h2>
             <div class="col-xs-20 col-md-10 col-md-offset-1 col-xs-offset-3">
-            <a href="listDogsPage.html" class="btn btn-primary btn-lg active " id="finalize" role="button">סיום</a></div>'
+            <a href="listDogsPage.html" class="btn btn-primary btn-lg active " id="finalize" role="button">סיום</a></div>
+            <div class="phpPage"></div>'
             ;
 	    }
 	   else 
