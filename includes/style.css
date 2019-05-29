@@ -450,7 +450,7 @@ header{
 
 .sound{
     float: right;
-    margin-right: 20px;
+    margin-right: 30px;
     margin-top: 20px;
 
 }
@@ -918,8 +918,8 @@ a:hover{
     .but-add-dog{color: #3e8e41; border: 3px solid #000000; background-image: url('/images/add-dog.svg');}    
     .but-add-dog:hover{ color: #3e8e41; border: 3px solid #000000; background-image: url('/images/add2-dog.svg');}
         
-    .but-add-dot{color: #3e8e41; border: 3px solid #000000;}    
-    .but-add-dot:hover{ color: #d3d3d3; border: 3px solid #000000;}
+    .but-add-dot{color: #000000; border: 3px solid #000000;}    
+    .but-add-dot:hover{ background-color: #3e8e41; color: #d3d3d3; border: 3px solid #000000;}
     .DataAdd{border: 0px; background: #ffffff;}
     .bodyADD h4{display: none;}
     .infoadd img{display: none;}
