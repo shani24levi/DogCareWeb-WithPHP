@@ -1,47 +1,68 @@
 
-/* for butoons on click */
-function pageLayout2() {
-    location.replace('listDogsPage.html');
-}
+/*form */
+$(function(){
+	$.validator.setDefaults({
+		highlight: function(element){
+			$(element)
+			.closest('.form-group')
+			.addClass('has-error')
+		},
+		unhighlight: function(element){
+			$(element)
+			.closest('.form-group')
+			.removeClass('has-error')
+		}
+	});
+	
+	$.validate({
+		rules:
+		{	
+		    password: "required",
+			birthDate: "required",
+			weight: {
+			    required:true,
+			    number:true
+			},
+			height:  {
+			    required:true,
+			    number:true
+			},
+			email: {
+				required: true,
+				email: true
+			}
+		},
+			messages:{			
+				email: {
+				required: true,
+				email: true
+			}
+		},
+				password: {
+					required: " Please enter password"
+				},
+				birthDate: {
+					required: " Please enter birthdate"
+				},
+				email: {
+					required: ' Please enter email',
+					email: ' Please enter valid email'
+				},
+				weight: {
+					required: " Please enter your weight",
+					number: " Only numbers allowed"
+				},
+				height: {
+					required: " Please enter your height",
+					number: " Only numbers allowed"
+				},
+			}
+    
+    });
+});
 
-function pageLayout3() {
-    location.replace('AddDogPage.html');
-}
-
-function pageIndex() {
-    location.replace('index.html');
-}
-
-function myDogINFO() {
-    location.replace('myDoginfoPage.html');
-}
-
-function goBackTOindex() {
-    location.replace('index.html');
-}
-
-function goBackTOlist() {
-    location.replace('listDogsPage.html');
-}
 
 
-
-
-function myFunction() {
-    var x = document.getElementById("myLinks");
-    var x2= document.getElementById("Logo");
-    if (x.style.display === "block") {
-      x.style.display = "none";
-      x2.style.display= "block";
-
-    } else {
-      x.style.display = "block"; 
-      x2.style.display= "none";
-
-     
-
-    }
-}
 
 
 
