@@ -72,7 +72,7 @@
                                 
         
         
-                      <a id="Logo" href="index.html">
+                      <a id="Logo" href="index.php">
                           <span class="fa fa-paw paw1"></span>
                           <h1 class="Hdog">Dog </h1>
                           <span class="logoIMG"></span> 
@@ -124,15 +124,12 @@
         <main>
             <?php
             $Dname = $_GET["name"];
-            $Owner = $_GET["Owne"];
-            $chipId = $_GET["cId"];
-            $birthDate = $_GET["bDay"];
-            $Owner = $_GET["Owne"];
-            $chipId = $_GET["cId"];
-            $birthDate = $_GET["bDay"];
+            $Owner = $_GET["Owners"];
+            $chipId = $_GET["chipId"];
+            $birthDate = $_GET["birthDate"];
             ?>
             <div class="container">    
-                <div class="row">
+                <div class="row" id="moveforme">
                   <div class="panel panel-default">
 
 
@@ -141,14 +138,14 @@
                             <img alt="User Pic" src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg" id="profile-image1" class="img-circle img-responsive"> 
                         </div>
                         <div class="col-md-8 col-xs-12 col-sm-6 col-lg-8" >
-                            <div class="container" >
+                            <div >
                                 <h2><?php echo $Dname ?></h2>
                                 <p>נוצר על ידי:  <b><?php echo $Owner ?></b></p>                                                   
                             </div>
                             <hr>
-                                <ul class="container details" >
-                                    <li><p>מספר ציפ: <?php echo $chId ?></p></li>
-                                    <li><p> תאריך לידה<?php echo $bDay ?></p></li>
+                                <ul >
+                                    <li><p>מספר ציפ: <?php echo $chipId ?></p></li>
+                                    <li><p> תאריך לידה<?php echo $birthDate ?></p></li>
                                 </ul>
                             <hr>
                         <div class="col-sm-5 col-xs-6 tital " >תאריך ההוספה : 6 מאי </div>
@@ -160,46 +157,7 @@
 
 
 
-            
-
-
-            <div class="container">
-                <div class="col-xs-20 col-md-10 col-md-offset-4 col-xs-offset-3">
-                     <?php 
-                    $myFile = "dogsData.json";
-                    $arr_data = array(); 
-                    $formdata = array(
-                        'name'=> $_GET["name"],
-                        'breed'=> $_GET["breed"],
-                        'age'=>$_GET['age'],
-                        'height'=> $_GET['height'],
-                        'weight'=> $_GET['weight'],
-                        'gender'=> $_GET['gender']
-                     );
-                     // Push user data to array
-	   array_push($arr_data,$formdata);
-       //Convert updated array to JSON
-	   $jsondata = json_encode($arr_data, JSON_PRETTY_PRINT);
-	   
-	   //write json data into data.json file
-	   if(file_put_contents($myFile, $jsondata)) {
-            echo '<h2><br><br><br> המידע נשמר בהצלחה<br></h2>
-            <div class="col-xs-20 col-md-10 col-md-offset-1 col-xs-offset-3">
-            <a href="listDogsPage.html" class="btn btn-primary btn-lg active " id="finalize" role="button">סיום</a></div>'
-            ;
-	    }
-	   else 
-	        echo "error";
-            ?>
-
-
-
-<div class="panel-heading">   <h4>  hhhhhה</h4> </div>
-
-
-                </div>
-            </div>
-
+        
                 
         </main>
 

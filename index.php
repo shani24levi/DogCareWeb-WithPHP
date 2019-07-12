@@ -1,3 +1,10 @@
+<?php session_start();
+// if(isset($_SESSION['id']) && !empty($_SESSION['id'])) {
+//    echo 'Set and not empty, and no undefined index error!';
+   
+// }else session_destroy();
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -61,6 +68,25 @@
                       <li><a href="#" class="text-center">View All</a></li>
                   </ul>
                 </li>
+                  <?php if(isset($_SESSION["name"]))
+                  echo '<li class="dropdown" id="wi"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span
+                  class="glyphicon glyphicon-user"  id="icon-Nav"></span>'.  $_SESSION["name"] .' <b class="caret"></b></a>
+                  <ul class="dropdown-menu" id="wi2">
+                      <li><a href="#"><span class="glyphicon glyphicon-user"></span>פרופיל</a></li>
+                      <li><a href="#"><span class="glyphicon glyphicon-cog"></span>הגדרות</a></li>
+                      <li class="divider"></li>
+                      <li><a href="logout.php"><span class="glyphicon glyphicon-off"></span>Logout</a></li>
+                    </ul>
+                  </li>';
+                  else echo '   <li class="dropdown" id="wi"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span
+                  class="glyphicon glyphicon-user"  id="icon-Nav"></span>התחבר <b class="caret"></b></a>'?>
+                </li>
+              </ul>
+
+
+
+
+<!--
                 <li class="dropdown" id="wi"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span
                   class="glyphicon glyphicon-user"  id="icon-Nav"></span>שרון <b class="caret"></b></a>
                   <ul class="dropdown-menu" id="wi2">
@@ -71,10 +97,11 @@
                     </ul>
                   </li>
               </ul>  
+-->
                         
 
 
-              <a id="Logo" href="index.html">
+              <a id="Logo" href="index.php">
                   <span class="fa fa-paw paw1"></span>
                   <h1 class="Hdog">Dog </h1>
                   <span class="logoIMG"></span> 
@@ -121,52 +148,50 @@
                   </div><!--/.nav-collapse -->
                 </div>               
               </div>
-        </header>
+      </header>
 
-        <main>
-            
-            <section class="HomeScren">
-                    <section>
-                            <!-- BEGIN LIST -->
-                            <ul class="box">
-                            <!-- BEGIN LIST ELEMENT -->
-                              <li>
-                                <div class="circle">
-                                  <div class="front front-popular oneDOG">
-                                    <div class="title color-1-font glyphicon glyphicon-star"></div>
-                                    <div class="price color-1-font"><span class="total">גולי</span></div>
-                                    <div class="description">76%</div>
-                                  </div><!-- end div .front -->
-                                  <div class="popular color-1-font glyphicon glyphicon-star"></div>
-                                  <div class="back color-1-bg info">
-                                    <div class="title">גולי</div>
-                                    <div class="description">
-                                      <a href="profille.html" class="btn btn-danger" style="padding: 0px;">צפה בפרופיל</a>
-                                    </div><!-- end div .description -->
-                                  </div><!-- end div .back color-1-bg info -->
-                                </div><!-- end div .circle -->
-                              </li>
+      <main>  
+          <section class="HomeScren">
+            <section>
+                <!-- BEGIN LIST -->
+                <ul class="box">
+                  <li>
+                    <div class="circle">
+                      <div class="front front-popular oneDOG">
+                        <div class="title color-1-font glyphicon glyphicon-star"></div>
+                        <div class="price color-1-font"><span class="total">גולי</span></div>
+                        <div class="description">76%</div>
+                      </div><!-- end div .front -->
+                      <div class="popular color-1-font glyphicon glyphicon-star"></div>
+                      <div class="back color-1-bg info">
+                        <div class="title">גולי</div>
+                        <div class="description">                             
+                          <a href="profille.html" class="btn btn-danger" style="padding: 0px;">צפה בפרופיל</a>
+                        </div><!-- end div .description -->
+                      </div><!-- end div .back color-1-bg info -->
+                    </div><!-- end div .circle -->
+                  </li>
                             <!-- END LIST ELEMENT -->
                             <!-- BEGIN LIST ELEMENT -->
-                            <li>
-                                <div class="circle">
-                                  <div class="front front-popular twoDOG">
-                                    <div class="title color-1-font glyphicon glyphicon-star"></div>
-                                    <div class="price color-1-font"><span class="total">שימי</span></div>
-                                    <div class="description">82%</div>
-                                  </div><!-- end div .front -->
-                                  <div class="popular color-1-font glyphicon glyphicon-star"></div>
-                                  <div class="back color-1-bg info">
-                                    <div class="title">שימי</div>
-                                    <div class="description">
-                                      <a href="#" class="btn btn-danger" style="padding: 0px;">צפה בפרופיל</a>
-                                    </div><!-- end div .description -->
-                                  </div><!-- end div .back color-1-bg info -->
-                                </div><!-- end div .circle -->
-                              </li>
+                  <li>
+                    <div class="circle">
+                      <div class="front front-popular twoDOG">
+                        <div class="title color-1-font glyphicon glyphicon-star"></div>
+                        <div class="price color-1-font"><span class="total">שימי</span></div>
+                        <div class="description">82%</div>
+                      </div><!-- end div .front -->
+                      <div class="popular color-1-font glyphicon glyphicon-star"></div>
+                      <div class="back color-1-bg info">
+                        <div class="title">שימי</div>
+                        <div class="description">
+                          <a href="#" class="btn btn-danger" style="padding: 0px;">צפה בפרופיל</a>
+                        </div><!-- end div .description -->
+                      </div><!-- end div .back color-1-bg info -->
+                    </div><!-- end div .circle -->
+                  </li>
                             <!-- END LIST ELEMENT -->
                             <!-- BEGIN LIST ELEMENT -->
-                            <li>
+                  <li>
                                 <div class="circle">
                                   <div class="front front-popular treeDOG">
                                     <div class="title color-1-font glyphicon glyphicon-star"></div>
@@ -181,10 +206,10 @@
                                     </div><!-- end div .description -->
                                   </div><!-- end div .back color-1-bg info -->
                                 </div><!-- end div .circle -->
-                              </li>
+                  </li>
                             <!-- END LIST ELEMENT -->
                             <!-- BEGIN LIST ELEMENT -->
-                              <li>
+                  <li>
                                 <div class="circle" class="backback">
                                   <div class="front front-popular" id="backback">
                                     <div class="title color-4-font glyphicon glyphicon-plus"></div>
@@ -200,12 +225,10 @@
                                     </div><!-- end div .description -->
                                   </div><!-- end div .back color-4-bg info -->
                                 </div><!-- end div .circle -->
-                              </li>
+                  </li>
                             <!-- END LIST ELEMENT -->
-                            </ul>
-                          <!--END LIST -->
-                          </section>
-
+                </ul>
+              </section>
             </section>      
 
 
@@ -235,96 +258,89 @@
                     <h4 class="Hh3">צפיה בזמן אמת</h4>
                 </div>
             </section>
+          </section>
 
-            <div class="row HomeScrenWEB">
-
-                <div class="content-slider">
-                    <div class="container-fluid">
-                        <div id="main_area">
+          <div class="row HomeScrenWEB" id="moveforme">
+            <div class="content-slider">
+              <div class="container-fluid">
+                <div id="main_area"  id="#moveforme">
                             <!-- Slider -->
-                            <div class="row">
-                                <div class="col-sm-12 main_area_mg0" id="slider">
+                  <div class="row" >
+                    <div class="col-sm-12 main_area_mg0" id="slider">
                                     <!-- Top part of the slider -->
-                                    <div class="row">
-                                     <div class="col-lg-6">
-                                                <p class="content-p col-lg-offset-2">כלבים של החיים</p>
-                                                    <div class="col-sm-12" id="carousel-text"></div>
-                                                    <div id="slide-content" >
-                                                        <div style="clear:both"></div>
-                                                        <p class="sub-text col-lg-offset-2">מצאו המלצות לטיפול בעיות התנהגות ובקר את כלבך מרחוק</p>
-                                                        <p class="newslleter col-lg-offset-2">מצאו כלבים באזורך לטיפול משותף</p>
-                                                          <nav class="navbar navbar-default nav-transparent col-lg-offset-2">
-                                                                <div class="nav nav-justified navbar-nav">
+                        <div class="row">
+                         <div class="col-lg-6">
+                            <p class="content-p col-lg-offset-2">כלבים של החיים</p>
+                            <div class="col-sm-12" id="carousel-text"></div>
+                            <div id="slide-content" >
+                              <div style="clear:both"></div>
+                              <p class="sub-text col-lg-offset-2">מצאו המלצות לטיפול בעיות התנהגות ובקר את כלבך מרחוק</p>
+                              <p class="newslleter col-lg-offset-2">מצאו כלבים באזורך לטיפול משותף</p>
+                              <nav class="navbar navbar-default nav-transparent col-lg-offset-2">
+                                <div class="nav nav-justified navbar-nav">
                                                          
-                                                                    <form class="navbar-form navbar-search" role="search">
-                                                                        <div class="input-group input-email input-group-lg"">
-                                                                
-                                                                            <input type="text" class="form-control fg" placeholder=" אזור מגורים או יעד">
-                                                                        
-                                                                            <div class="input-group-btn">
-                                                                                <button type="button" class="btn btn-search btn-info fg">
-                                                                                    <span class="label-icon"> חפש כלבים באזורך</span>
-                                                                                </button>
-                                                                            </div>
-                                                                        </div>  
-                                                                    </form>   
-                                                                 
-                                                                </div>
-                                                            </nav>
-                                                        <div style="display: none;">  
-                                                            <div id="slide-content-0">
-                                                                <h2 class="myshadow col-lg-offset-2">Slider One</h2>
-                                                            </div>
-        
-                                                            <div id="slide-content-1">
-                                                                <h2 class="myshadow col-lg-offset-2">Slider Two</h2>
-                                                            </div>
-        
-                                                            <div id="slide-content-2">
-                                                                <h2 class="myshadow col-lg-offset-2">Slider Three</h2>
-                                                            </div>
-                                                            <div id="slide-content-3">
-                                                                <h2 class="myshadow col-lg-offset-2">Slider Four</h2>
-                                                            </div>
-        
-                                                            <div id="slide-content-4">
-                                                                <h2 class="myshadow col-lg-offset-2">Slider Five</h2>
-                                                            </div>
-        
-                                                            <div id="slide-content-5">
-                                                                <h2 class="myshadow col-lg-offset-2">Slider Six</h2>
-                                                            </div>
-                                                        </div> 
-                                                    </div>
-                                            </div>
-                                    <div class="col-lg-6 pd0">
-                                        <div class="col-sm-12" id="carousel-bounding-box">
-                                            <div class="carousel slide" id="myCarousel" data-ride="carousel">
-                                                <!-- Carousel items -->
-                                                <div class="carousel-inner bordered">
-                                                    <div class="item active" data-slide-number="0">
-                                                    <img src="images/one.jpg" class="img-responsive img-left"></div>
-        
-                                                    <div class="item" data-slide-number="1">
-                                                    <img src="images/two.jpg" class="img-responsive img-left"></div>
-        
-            
-                                                </div><!-- Carousel nav -->
-                                               
-                                            </div>
-                                        </div>
-                                        </div>
-                                       
-                                    </div>
+                                  <form class="navbar-form navbar-search" role="search">
+                                    <div class="input-group input-email input-group-lg">                        
+                                      <input type="text" class="form-control fg" placeholder=" אזור מגורים או יעד">
+                                      <div class="input-group-btn">
+                                        <button type="button" class="btn btn-search btn-info fg">
+                                          <span class="label-icon"> חפש כלבים באזורך</span>
+                                        </button>
+                                      </div>
+                                    </div>  
+                                  </form>                                      
                                 </div>
-                            </div><!--/Slider-->
+                              </nav>
+
+                              <div style="display: none;">  
+                                <div id="slide-content-0">
+                                  <h2 class="myshadow col-lg-offset-2">Slider One</h2>
+                                </div>
         
+                                <div id="slide-content-1">
+                                  <h2 class="myshadow col-lg-offset-2">Slider Two</h2>
+                                </div>
+        
+                                <div id="slide-content-2">
+                                  <h2 class="myshadow col-lg-offset-2">Slider Three</h2>
+                                </div>
+                                <div id="slide-content-3">
+                                  <h2 class="myshadow col-lg-offset-2">Slider Four</h2>
+                                </div>
+        
+                                <div id="slide-content-4">
+                                  <h2 class="myshadow col-lg-offset-2">Slider Five</h2>
+                                </div>
+      
+                                <div id="slide-content-5">
+                                  <h2 class="myshadow col-lg-offset-2">Slider Six</h2>
+                                </div>
+                              </div> 
+                            </div>
+                          </div>
+                          <div class="col-lg-6 pd0">
+                            <div class="col-sm-12" id="carousel-bounding-box">
+                              <div class="carousel slide" id="myCarousel" data-ride="carousel">
+                                                <!-- Carousel items -->
+                                <div class="carousel-inner bordered">
+                                  <div class="item active" data-slide-number="0">
+                                      <img src="images/one.jpg" class="img-responsive img-left"></div>
+      
+                                  <div class="item" data-slide-number="1">
+                                    <img src="images/two.jpg" class="img-responsive img-left"></div>
+                                </div><!-- Carousel nav -->         
+                              </div>
+                            </div>
+                          </div>        
                         </div>
-                    </div>
-                </div>
+                      </div>
+                    </div><!--/Slider-->
+                  </div>
+              </div>
+            </div>
         
 
-                <script>
+            <script>
             jQuery(document).ready(function($) {
          
                 $('#myCarousel').carousel({
@@ -343,71 +359,62 @@
             </script>
 
 
+            <div class="row" id="displayit">
+              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="service-block">
+                  <div class="service-icon">
+                    <img src="images/playtime.svg" class="imagHome2" alt="">
+                  </div>
+                  <div class="service-content">
+                    <h4><a href="#">פעילות משחק </a></h4>
+                    <p>משחקים מרחוק</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="service-block">
+                  <div class="service-icon">
+                    <img src="images/dog-food.svg"  class="imagHome2" alt="">
+                  </div>
+                  <div class="service-content">
+                     <h4> <a href="#">
+                      תזונה </a></h4>
+                      <p>מעקב תזונה ובריאות</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                  <div class="service-block">
+                    <div class="service-icon">
+                      <img src="images/dog-22.svg"  class="imagHome2" alt="">
+                    </div>
+                    <div class="service-content">
+                      <h4><a href="#">
+                         התקדמות</a></h4>
+                      <p>ניהול מעקב טיפול משמעתי,מדדי לב,ספורט,תזונה</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="service-block">
+                  <div class="service-icon">
+                    <img src="images/dog-11.svg"   class="imagHome2" alt="">
+                  </div>
+                  <div class="service-content">
+                    <h4><a href="#">
+                       משמעת</a></h4> 
+                    <p>התמודדות עם בעיות משמעת</p>
+                  </div>
+                </div>
+              </div>
+            </div>           
+          </div> 
+  
+      </main>
 
 
-     
-   
-
-
-
-                      <div class="row" id="displayit">
-                          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                              <div class="service-block">
-                                  <div class="service-icon">
-                                      <img src="images/playtime.svg" class="imagHome2" alt="">
-                                  </div>
-                                  <div class="service-content">
-                                       <h4><a href="#">
-                                         פעילות משחק </a></h4>
-                                      <p>משחקים מרחוק</p>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                              <div class="service-block">
-                                  <div class="service-icon">
-                                      <img src="images/dog-food.svg"  class="imagHome2" alt="">
-                                  </div>
-                                  <div class="service-content">
-                                      <h4> <a href="#">
-                                          תזונה </a></h4>
-                                      <p>מעקב תזונה ובריאות</p>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                              <div class="service-block">
-                                  <div class="service-icon">
-                                      <img src="images/dog-22.svg"  class="imagHome2" alt="">
-                                  </div>
-                                  <div class="service-content">
-                                      <h4><a href="#">
-                                           התקדמות</a></h4>
-                                      <p>ניהול מעקב טיפול משמעתי,מדדי לב,ספורט,תזונה</p>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                              <div class="service-block">
-                                  <div class="service-icon">
-                                      <img src="images/dog-11.svg"   class="imagHome2" alt="">
-                                  </div>
-                                  <div class="service-content">
-                                       <h4><a href="#">
-                                          משמעת</a></h4> 
-                                      <p>התמודדות עם בעיות משמעת</p>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>           
-            </div> 
-            
-            
-
-        </main>
-
-
-        <footer>
+      <footer>
             <div class="footer-top"> 
                <div class="container">
                  <div class="col-lg-2 col-xs-12 text-center">
@@ -458,23 +465,15 @@
                     </div>
                 </div>
             </div>
-        </footer>
+      </footer>
 
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
-
-        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-        <script src="./includes/script.js"></script>
-        <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-
-        <script type="text/javascript">
-            $(document).ready(function() {
-              $('.carousel').carousel({interval: 7000});
-            });
-          </script>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
 
+      <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+      <script src="./includes/script.js"></script>
+      <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     </body>
 </html>
