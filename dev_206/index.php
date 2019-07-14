@@ -1,7 +1,6 @@
 <?php
-    include 'php/joins/db.php';
-    include "php/joins/config.php";
-    session_start();//on logout session_destroy();
+    include 'db.php';
+    
     if(!empty($_POST["loginMail"])){
         $query = "SELECT * FROM tbl_users_212 WHERE email='"
         . $_POST["loginMail"]
@@ -12,26 +11,24 @@
         $result = mysqli_query($connection , $query);
         $row = mysqli_fetch_array($result);
         if(is_array($row)) {
-            header("Location: index.php");
+            header("Location: frontPage.php");
         } else {
             $message = "Invalid Username or Password!";
         }
     }
-?>
+    ?>
 
 <!DOCTYPE html>
-<<html>
-    <head>
-            <meta charset="utf-8">
-            <title>DogFetch- Login</title>
-            <meta charset="utf-8">
-            <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-            <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-            <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-            <link rel="stylesheet" href="includes/style.css">
-    </head>
+    <html>
+        <head>
+                <meta name="viewport" content="width=device-width, initial scale=1.0">
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+                <link rel="stylesheet" href="./includes/style_new_proj.css">
+                <meta charset="UTF-8">
+                <title>DogFetch- Login</title>
+        </head>
 
-    <body id="wrapper">
+        <body id="wrapper">
             <header>
                 <div class="navbar navbar-custom navbar-static-top" id="notonapp">
                     <div class="container">
@@ -72,6 +69,7 @@
                                 <input type="password" class="form-control input-lg" name="loginPass" id="loginPass" placeholder="Password" required="" />
                                 <div class="pwstrength_viewport_progress"></div>
 
+
                                 <button type="submit" class="btn btn-primary">Sign in</button>
                                 <div class="error-message"><?php if(isset($message)) { echo $message; } ?></div>
                                     <a href="#">Create account</a> or <a href="#">reset password</a>
@@ -81,9 +79,7 @@
                     </div>
                 </div>
             </main>
-    </body>
+        </body>
 
-</html>
-
-
-
+        <script src="./includes/main.js"></script>
+    </html>

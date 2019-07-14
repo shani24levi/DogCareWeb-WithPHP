@@ -1,3 +1,57 @@
+    
+<?php session_start();
+    include 'php/joins/db.php';
+    
+    $Dname = $_GET["name"];
+    $Owner = $_SESSION["id"];
+    $chipId = $_GET["chipId"];
+    $breed = $_GET["breed"];
+    $gender = $_GET["gender"];
+    $id=$_SESSION["id"];
+    if (!empty($_GET["birthDate"])) {
+        $birthDate = $_GET["birthDate"];
+    }
+    else {$birthDate = null;}
+    if (!empty($_GET["height"])) {
+        $height = $_GET["height"];
+    }
+    else {
+        $height = null;}
+    if (!empty($_GET["weight"])) {
+        $weight = $_GET["weight"];
+    }
+    else {
+        $weight = null;}
+    
+    //insert to mysql
+    $query  = "INSERT INTO `studDB19a`.`tb_dogs_212`(`snum`, `name`, `breed`, `age`, `weight`, `height`, `gender`) 
+    VALUES ('".$chipId."','" .$Dname."','".$breed."','".$birthDate."','".$weight."','".$height."','".$gender."');";
+    $result=mysqli_query($connection, $query);
+    if (!$result) {
+        $message2 = "הכלב כבר רשום במערכת";
+        $flag=1;
+    
+    } else {
+    
+        $flag=0;
+    if (mysqli_query($connection, $query)) {
+    echo "New record created successfully";
+    } else {
+    //echo "Error: " . $query . "<br>" . mysqli_error($connection);
+    
+    }
+    $sql = "INSERT INTO `studDB19a`.`tb_user-dog_212`(`id`,`snum`)
+    VALUES ('".$id."','" .$chipId."');";
+    if (mysqli_query($connection, $sql)) {
+    echo "New record created successfully";
+    } else {
+    echo "Error: " . $sql . "<br>" . mysqli_error($connection);
+    }
+    }
+    mysqli_close($connection);
+            
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -122,29 +176,44 @@
         </header>
 
         <main>
-            <?php
-            $Dname = $_GET["name"];
-            $Owner = $_GET["Owners"];
-            $chipId = $_GET["chipId"];
-            $birthDate = $_GET["birthDate"];
-            ?>
             <div class="container">    
                 <div class="row" id="moveforme">
                   <div class="panel panel-default">
-
-
                         <div class="panel-body">
                             <div class="col-md-4 col-xs-12 col-sm-6 col-lg-4">
                             <img alt="User Pic" src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg" id="profile-image1" class="img-circle img-responsive"> 
                         </div>
                         <div class="col-md-8 col-xs-12 col-sm-6 col-lg-8" >
-                            <div >
-                                <h2><?php echo $Dname ?></h2>
+
+
+                        <div class="container" >
+                            <?php if($flag!=1) echo '    <h2>'.$Dname.'</h2>
+                                <p>נוצר על ידי:  <b>'.$_SESSION["name"].'</b></p>                                                   
+                            </div>
+                            <hr>
+                                <ul class="container details" >
+                                    <li><p>מספר ציפ:'.$chipId.'</p></li>
+                                    <li><p> תאריך לידה: '.$birthDate.'</p></li>
+                                </ul>
+                            <hr>
+                        <div class="col-sm-5 col-xs-6 tital " >תאריך ההוספה :'.date("d/m/Y").'</div>
+                        <a href="listDogsPage.html" class="btn btn-primary btn-lg active " id="finalize" role="button">סיום</a></div>';
+                        else echo '<h2>'. $message2 .'</h2>
+                        <a href="AddDogPage.php" class="btn btn-primary btn-lg active " id="finalize" role="button">חזור</a></div>' ?>;
+                    </div>
+
+
+
+
+
+
+                           <!-- <div >
+                                <h2><?php echo $name ?></h2>
                                 <p>נוצר על ידי:  <b><?php echo $Owner ?></b></p>                                                   
                             </div>
                             <hr>
                                 <ul >
-                                    <li><p>מספר ציפ: <?php echo $chipId ?></p></li>
+                                    <li><p>מספר ציפ: <?php echo $snum ?></p></li>
                                     <li><p> תאריך לידה<?php echo $birthDate ?></p></li>
                                 </ul>
                             <hr>
@@ -153,7 +222,7 @@
                     </div>
                 </div>
             </div>
-            </div>
+            </div>-->
 
 
 

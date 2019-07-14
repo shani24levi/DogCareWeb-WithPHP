@@ -11,18 +11,14 @@
     <head>
         <title>DogFetch</title>
         <meta charset="UTF-8">
-
         <link rel="stylesheet" href="includes/style.css">
         <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
         <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
-
-
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    </head>
+    
+      </head>
 
     <body id="wrapper">
       <header>
@@ -30,9 +26,9 @@
           <div class="container">
             <div class="navbar-header" id="go-right">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
+                <span class="icon-bar" style="background-color: #fff;"></span>
+                <span class="icon-bar" style="background-color: #fff;"></span>
+                <span class="icon-bar" style="background-color: #fff;" ></span>
               </button>
 
 
@@ -68,9 +64,10 @@
                       <li><a href="#" class="text-center">View All</a></li>
                   </ul>
                 </li>
+
                   <?php if(isset($_SESSION["name"]))
                   echo '<li class="dropdown" id="wi"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span
-                  class="glyphicon glyphicon-user"  id="icon-Nav"></span>'.  $_SESSION["name"] .' <b class="caret"></b></a>
+                  class="glyphicon glyphicon-user"  id="icon-Nav"></span>'.  $_SESSION["name"] .' </a>
                   <ul class="dropdown-menu" id="wi2">
                       <li><a href="#"><span class="glyphicon glyphicon-user"></span>פרופיל</a></li>
                       <li><a href="#"><span class="glyphicon glyphicon-cog"></span>הגדרות</a></li>
@@ -78,27 +75,9 @@
                       <li><a href="logout.php"><span class="glyphicon glyphicon-off"></span>Logout</a></li>
                     </ul>
                   </li>';
-                  else echo '   <li class="dropdown" id="wi"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span
-                  class="glyphicon glyphicon-user"  id="icon-Nav"></span>התחבר <b class="caret"></b></a>'?>
+                  else  echo '<li id="wi"><a href="login.php" ><span class="glyphicon glyphicon-user"  id="icon-Nav"></span> התחבר </a></li>'?>
                 </li>
               </ul>
-
-
-
-
-<!--
-                <li class="dropdown" id="wi"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span
-                  class="glyphicon glyphicon-user"  id="icon-Nav"></span>שרון <b class="caret"></b></a>
-                  <ul class="dropdown-menu" id="wi2">
-                      <li><a href="#"><span class="glyphicon glyphicon-user"></span>פרופיל</a></li>
-                      <li><a href="#"><span class="glyphicon glyphicon-cog"></span>הגדרות</a></li>
-                      <li class="divider"></li>
-                      <li><a href="#"><span class="glyphicon glyphicon-off"></span>Logout</a></li>
-                    </ul>
-                  </li>
-              </ul>  
--->
-                        
 
 
               <a id="Logo" href="index.php">
@@ -113,12 +92,12 @@
               </div>
                 <div class="collapse navbar-collapse" id="fix">
                   <ul class="nav navbar-nav" id="onlyapp" id="moveRight">
-                      <li><a href="#contact"><img src="images/avatar.svg" class="imagHumborger">הגדרות פרפיל </a></li>
-                      <li class="active"><a href="listDogsPage.html"><img src="images/add-dog.svg" class="imagHumborger">הכלבים שלי</a></li>   
+                      <li><a href="#"><img src="images/avatar.svg" class="imagHumborger">הגדרות פרפיל </a></li>
+                      <li class="active"><a href="listDogsPage.php"><img src="images/add-dog.svg" class="imagHumborger">הכלבים שלי</a></li>   
                       <li class="active"><a href="#"><img src="images/animal.svg" class="imagHumborger">מעקב טיפול</a></li>
-                      <li class="active"><a href="listDOT.html"><img src="images/dot.svg" class="imagHumborger">אזורים אזורים</a></li>
+                      <li class="active"><a href="listDOT.php"><img src="images/dot.svg" class="imagHumborger">אזורים אזורים</a></li>
                       <li class="active"><a href="#"><img src="images/colar.svg" class="imagHumborger">מכשיר אלקטרוני</a></li>
-                      <li class="active"><a href="#"><img src="images/logout.svg" class="imagHumborger"> התנתק\י</a></li>
+                      <li class="active"><a href="logout.php"><img src="images/logout.svg" class="imagHumborger"> התנתק\י</a></li>
                   </ul>
                 </div><!--/.nav-collapse -->
               </div>
@@ -138,12 +117,13 @@
                   </div>
                   <div class="collapse navbar-collapse" id="moveRight">
                     <ul class="nav navbar-nav" id="wi">
-                        <li class="active"><a href="#">הגדרות</a></li>
+                      <li class="active"><a href="#">הגדרות</a></li>
+                      <li class="active"><a href="table.php"> בקרת טיפול</a></li>
                       <li class="active"><a href="#">טיפול משמעת</a></li>
                       <li class="active"><a href="#"> WIFI מעקב </a></li>
                       <li class="active"><a href="#"> GPS מעקב </a></li>
-                      <li class="active"><a href="listDogsPage.html">הכלבים שלי</a></li>   
-                      <li><a href="index.html">בית</a></li>
+                      <li class="active"><a href="listDogsPage.php">הכלבים שלי</a></li>   
+                      <li><a href="index.php">בית</a></li>
                     </ul>
                   </div><!--/.nav-collapse -->
                 </div>               
@@ -155,22 +135,25 @@
             <section>
                 <!-- BEGIN LIST -->
                 <ul class="box">
+
                   <li>
                     <div class="circle">
-                      <div class="front front-popular oneDOG">
-                        <div class="title color-1-font glyphicon glyphicon-star"></div>
-                        <div class="price color-1-font"><span class="total">גולי</span></div>
+                      <div class="front">
+                        <img scr="images/goly.png" class="oneDOG"> 
+
+                        <h4 class="total">גולי</h4>
                         <div class="description">76%</div>
                       </div><!-- end div .front -->
-                      <div class="popular color-1-font glyphicon glyphicon-star"></div>
+
                       <div class="back color-1-bg info">
                         <div class="title">גולי</div>
                         <div class="description">                             
-                          <a href="profille.html" class="btn btn-danger" style="padding: 0px;">צפה בפרופיל</a>
+                          <a href="profille.php" class="btn btn-danger" style="padding: 0px;">צפה בפרופיל</a>
                         </div><!-- end div .description -->
                       </div><!-- end div .back color-1-bg info -->
                     </div><!-- end div .circle -->
                   </li>
+
                             <!-- END LIST ELEMENT -->
                             <!-- BEGIN LIST ELEMENT -->
                   <li>
@@ -467,6 +450,7 @@
             </div>
       </footer>
 
+      <script src="./includes/main.js"></script>
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
