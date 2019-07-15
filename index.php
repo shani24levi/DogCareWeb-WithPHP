@@ -5,6 +5,43 @@
 // }else session_destroy();
 ?>
 
+ 
+<?php 
+    include 'php/joins/db.php';
+    //include 'functions.php';
+    //require("functions.php");
+
+    if(!isset($_SESSION["id"]))
+
+     header("Location:login.php");
+
+?>
+
+<?php 
+    //$userData=getUserData(getId($_SESSION['name']));
+    //$dogData=getDogData(getDogId($_SESSION['name']));
+
+    
+    $query  = "SELECT  u.id, p.name, p.pictur, p.dscription
+
+    FROM `tb_users_212` AS u INNER JOIN `tb_dogs_212` AS 
+
+    p ON p.id = u.id
+
+    ORDER BY p.name;";
+
+    //$model2 = mysqli_query($connection, $dogData);
+    $model = mysqli_query($connection, $query);
+
+    if(!$model) {
+
+        die("DB query failed.");
+
+    }
+
+?>
+
+
 <!DOCTYPE html>
 <html>
 
@@ -32,9 +69,9 @@
               </button>
 
 
-              <ul class="nav navbar-nav navbar-left leftSise2" style="float: right;">
-                <li class="dropdown" id="wi"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span
-                  class="glyphicon glyphicon-bell" id="icon-Nav"></span><span class="label label-primary">42</span>
+              <ul class=" leftSise2" >
+                <li class="dropdown" id="wi hi"><a href="#" ><span
+                  class="glyphicon glyphicon-bell" id="icon-Nav"></span>
                   </a>
                 </li>
               </ul>
@@ -117,13 +154,19 @@
                   </div>
                   <div class="collapse navbar-collapse" id="moveRight">
                     <ul class="nav navbar-nav" id="wi">
-                      <li class="active"><a href="#">הגדרות</a></li>
-                      <li class="active"><a href="table.php"> בקרת טיפול</a></li>
+                    <?php if(isset($_SESSION["name"])) echo '
+                    <li class="active"><a href="#">הגדרות</a></li>
                       <li class="active"><a href="#">טיפול משמעת</a></li>
                       <li class="active"><a href="#"> WIFI מעקב </a></li>
                       <li class="active"><a href="#"> GPS מעקב </a></li>
-                      <li class="active"><a href="listDogsPage.php">הכלבים שלי</a></li>   
-                      <li><a href="index.php">בית</a></li>
+                      <li class="active"><a href="listDogsPage.html">הכלבים שלי</a></li>   
+                      <li><a href="index.php">בית</a></li>';
+                      else echo '  <li class="active"><a href="login.php">הגדרות</a></li>
+                      <li class="active"><a href="login.php">טיפול משמעת</a></li>
+                      <li class="active"><a href="login.php"> WIFI מעקב </a></li>
+                      <li class="active"><a href="login.php"> GPS מעקב </a></li>
+                      <li class="active"><a href="login.php">הכלבים שלי</a></li>   
+                      <li><a href="index.php">בית</a></li>';?>
                     </ul>
                   </div><!--/.nav-collapse -->
                 </div>               
@@ -133,91 +176,74 @@
       <main>  
           <section class="HomeScren">
             <section>
-                <!-- BEGIN LIST -->
-                <ul class="box">
+              <?php 
+            
 
-                  <li>
-                    <div class="circle">
-                      <div class="front">
-                        <img scr="images/goly.png" class="oneDOG"> 
+                //show data for each user
+               /* echo '<ul class="box">';
+                if($userDat['id']=$dogDat['id']){
+                  while($row = mysqli_fetch_assoc($model2)) {//results are in associative array. keys are cols names
+    
+                      echo '<li><div class="circle"><div class="front front-popular" style="background-image: url(' .$dogDat['pictur']. '); background-repeat: no-repeat; background-size: cover">
+                                  <div class="title color-1-font glyphicon glyphicon-star"></div>
+                                  <div class="price color-1-font"><span class="total">' . $dogDat['name'] . '</span></div>
+                                  <div class="description">' . $dogDat['dscription'] . '</div>
+                              </div><!-- end div .front -->
+                              <div class="popular color-1-font glyphicon glyphicon-star"></div>
+                              <div class="back color-1-bg info">
+                              <div class="title">' . $dogDat['name'] .'</div>
+                              <div class="description">
+                                  <a href="profile.php" class="btn btn-danger" style="padding: 0px;">צפה בפרופיל</a>
+                              </div><!-- end div .description -->
+                          </div><!-- end div .back color-1-bg info -->
+                      </div><!-- end div .circle -->
+                    </li>';
+                    
+                  }
+    
+                  echo "</ul>";
+    
+                }
+                //release returned data
 
-                        <h4 class="total">גולי</h4>
-                        <div class="description">76%</div>
-                      </div><!-- end div .front -->
+                mysqli_free_result($model2);*/
+    
+              
+              echo '<ul class="box">';
+              while($row = mysqli_fetch_assoc($model)) {//results are in associative array. keys are cols names
 
-                      <div class="back color-1-bg info">
-                        <div class="title">גולי</div>
-                        <div class="description">                             
-                          <a href="profille.php" class="btn btn-danger" style="padding: 0px;">צפה בפרופיל</a>
-                        </div><!-- end div .description -->
+                //output data from each row
+
+                  echo '<li><div class="circle"><div class="front front-popular" style="background-image: url(' .$row["pictur"]. '); background-repeat: no-repeat; background-size: cover">
+                              <div class="title color-1-font glyphicon glyphicon-star" style="position: inherit; top: -16%;"></div>
+                              <div class="price color-1-font"><span class="total">' . $row["name"] . '</span></div>
+                              <div class="description">' . $row["dscription"] . '</div>
+                          </div><!-- end div .front -->
+                          <div class="popular color-1-font glyphicon glyphicon-star"></div>
+                          <div class="back color-1-bg info">
+                          <div class="title">' . $row["name"] .'</div>
+                          <div class="description">
+                              <a href="profille.php" class="btn btn-danger" style="padding: 0px;">צפה בפרופיל</a>
+                          </div><!-- end div .description -->
                       </div><!-- end div .back color-1-bg info -->
-                    </div><!-- end div .circle -->
-                  </li>
+                  </div><!-- end div .circle -->
+                </li>';
+                
+              }
 
-                            <!-- END LIST ELEMENT -->
-                            <!-- BEGIN LIST ELEMENT -->
-                  <li>
-                    <div class="circle">
-                      <div class="front front-popular twoDOG">
-                        <div class="title color-1-font glyphicon glyphicon-star"></div>
-                        <div class="price color-1-font"><span class="total">שימי</span></div>
-                        <div class="description">82%</div>
-                      </div><!-- end div .front -->
-                      <div class="popular color-1-font glyphicon glyphicon-star"></div>
-                      <div class="back color-1-bg info">
-                        <div class="title">שימי</div>
-                        <div class="description">
-                          <a href="#" class="btn btn-danger" style="padding: 0px;">צפה בפרופיל</a>
-                        </div><!-- end div .description -->
-                      </div><!-- end div .back color-1-bg info -->
-                    </div><!-- end div .circle -->
-                  </li>
-                            <!-- END LIST ELEMENT -->
-                            <!-- BEGIN LIST ELEMENT -->
-                  <li>
-                                <div class="circle">
-                                  <div class="front front-popular treeDOG">
-                                    <div class="title color-1-font glyphicon glyphicon-star"></div>
-                                    <div class="price color-1-font"><span class="total">מישמש</span></div>
-                                    <div class="description">40%</div>
-                                  </div><!-- end div .front -->
-                                  <div class="popular color-1-font glyphicon glyphicon-star"></div>
-                                  <div class="back color-1-bg info">
-                                    <div class="title">מישמש</div>
-                                    <div class="description">
-                                      <a href="#" class="btn btn-danger" style="padding: 0px;">צפה בפרופיל</a>
-                                    </div><!-- end div .description -->
-                                  </div><!-- end div .back color-1-bg info -->
-                                </div><!-- end div .circle -->
-                  </li>
-                            <!-- END LIST ELEMENT -->
-                            <!-- BEGIN LIST ELEMENT -->
-                  <li>
-                                <div class="circle" class="backback">
-                                  <div class="front front-popular" id="backback">
-                                    <div class="title color-4-font glyphicon glyphicon-plus"></div>
-                                    <div class="price color-4-font"><span class="total">הוסף</span></div>
-                                  </div><!-- end div .front -->
-                                  <div class="popular color-4-font glyphicon glyphicon-time"></div>
-                                  <div class="back color-4-bg info">
-                                    <div class="title">  <a href="AddDogPage.html">
-                                        <span class="glyphicon glyphicon-plus"></span>
-                                      </a></div>
-                                    <div class="description">
-                                      <p>הוסף כלב</p>
-                                    </div><!-- end div .description -->
-                                  </div><!-- end div .back color-4-bg info -->
-                                </div><!-- end div .circle -->
-                  </li>
-                            <!-- END LIST ELEMENT -->
-                </ul>
-              </section>
-            </section>      
+              echo "</ul>";
 
+              //release returned data
+
+              mysqli_free_result($model);
+
+              ?>
+            </section>
+          </section>
 
             <section class="butMain">
                 <div class= "fille">
-                    <button class="Mq"><img src="images/folder.svg" class="ImgIcon" ></button>
+                    <a href="folders.php" ><button class="Mq"><img src="images/folder.svg" class="ImgIcon" ></button></a>
                     <h4 class="Hh3">פידבקים</h4>
                 </div>
 
@@ -260,12 +286,12 @@
                               <p class="sub-text col-lg-offset-2">מצאו המלצות לטיפול בעיות התנהגות ובקר את כלבך מרחוק</p>
                               <p class="newslleter col-lg-offset-2">מצאו כלבים באזורך לטיפול משותף</p>
                               <nav class="navbar navbar-default nav-transparent col-lg-offset-2">
-                                <div class="nav nav-justified navbar-nav">
+                                <div class="nav nav-justified navbar-nav  style="flex-direction: inherit;">
                                                          
                                   <form class="navbar-form navbar-search" role="search">
                                     <div class="input-group input-email input-group-lg">                        
                                       <input type="text" class="form-control fg" placeholder=" אזור מגורים או יעד">
-                                      <div class="input-group-btn">
+                                      <div class="input-group-btn" style="width: auto;">
                                         <button type="button" class="btn btn-search btn-info fg">
                                           <span class="label-icon"> חפש כלבים באזורך</span>
                                         </button>
@@ -321,7 +347,6 @@
                   </div>
               </div>
             </div>
-        
 
             <script>
             jQuery(document).ready(function($) {
@@ -340,7 +365,7 @@
                 });
             });
             </script>
-
+        
 
             <div class="row" id="displayit">
               <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
@@ -455,7 +480,7 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
-
+      <script src="includes/jquery.min.js"></script>
       <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
       <script src="./includes/script.js"></script>
       <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
